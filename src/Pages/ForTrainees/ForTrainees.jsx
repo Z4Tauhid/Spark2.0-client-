@@ -172,7 +172,7 @@ function RoleCard({
       ${
         featured
           ? 'border-[#E85D26]/50 bg-[#E85D26]/5 shadow-[0_0_24px_rgba(232,93,38,0.12)]'
-          : 'border-gray-100 bg-white shadow-sm hover:shadow-md'
+          : 'border-gray-100 bg-white shadow-sm hover:shadow-md '
       }`}
     >
       {featured && (
@@ -183,9 +183,9 @@ function RoleCard({
 
       <div className="text-3xl mb-4">{emoji}</div>
 
-      <h3 className="font-display text-lg font-bold text-[#1a2744] mb-3">
+      <h3 className={`font-display text-lg font-bold mb-3 ${ featured ? 'text-white' : 'text-[#1a2744]'}`}>
         {title}
-      </h3>
+        </h3>
 
       <div className="space-y-2 mb-4">
         {[
@@ -197,13 +197,21 @@ function RoleCard({
             key={row.label}
             className="flex items-center justify-between gap-2"
           >
-            <span className="font-body text-xs text-gray-400">
-              {row.label}
-            </span>
+            <span
+  className={`font-body text-xs ${
+    featured ? 'text-white' : 'text-gray-700'
+  }`}
+>
+  {row.label}
+</span>
 
-            <span className="font-body text-xs font-semibold text-[#1a2744]">
-              {row.value}
-            </span>
+            <span
+  className={`font-body text-xs font-semibold ${
+    featured ? 'text-white' : 'text-[#1a2744]'
+  }`}
+>
+  {row.value}
+</span>
           </div>
         ))}
       </div>
