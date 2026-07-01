@@ -4,7 +4,7 @@ export default function Error404() {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-[#1a2744] flex flex-col items-center justify-center text-center px-4 relative overflow-hidden">
+    <div className="min-h-screen bg-[#1c244b] flex flex-col items-center justify-center text-center px-4 relative overflow-hidden">
 
       {/* dot grid */}
       <div
@@ -13,27 +13,27 @@ export default function Error404() {
       />
 
       {/* orange glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-[#E85D26] opacity-[0.07] blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-[#ff8000] opacity-[0.07] blur-[120px] pointer-events-none" />
 
       {/* top bar */}
-      <div className="absolute top-0 inset-x-0 h-[3px] bg-[#E85D26]" />
+      <div className="absolute top-0 inset-x-0 h-[3px] bg-[#ff8000]" />
 
       <div className="relative z-10 w-full max-w-md mx-auto">
 
         {/* Logo */}
         <Link to="/" className="inline-flex items-center mb-12 group">
-          <span className="font-display text-2xl font-bold text-white leading-none">spark</span>
-          <span className="w-[7px] h-[7px] rounded-full bg-[#E85D26] mb-[3px] ml-[2px] group-hover:scale-125 transition-transform duration-200" />
+          <span className="font-body text-2xl font-bold text-white leading-none">spark</span>
+          <span className="w-[7px] h-[7px] rounded-full bg-[#ff8000] mb-[3px] ml-[2px] group-hover:scale-125 transition-transform duration-200" />
         </Link>
 
         {/* Ghost number behind icon */}
         <div className="relative flex items-center justify-center mb-6">
-          <span className="font-display font-bold select-none text-[130px] sm:text-[160px] leading-none text-white/[0.06]">
+          <span className="font-body font-bold select-none text-[130px] sm:text-[160px] leading-none text-white/[0.06]">
             404
           </span>
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-20 h-20 rounded-2xl bg-[#E85D26]/15 border border-[#E85D26]/30 flex items-center justify-center">
-              <svg className="w-10 h-10 text-[#E85D26]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="w-20 h-20 rounded-2xl bg-[#ff8000]/15 border border-[#ff8000]/30 flex items-center justify-center">
+              <svg className="w-10 h-10 text-[#ff8000]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
                   d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
@@ -41,7 +41,7 @@ export default function Error404() {
           </div>
         </div>
 
-        <h1 className="font-display text-3xl sm:text-4xl font-bold text-white mb-4 leading-tight">
+        <h1 className="font-body text-3xl sm:text-4xl font-bold text-white mb-4 leading-tight">
           Page Not Found
         </h1>
         <p className="font-body text-white/50 text-sm sm:text-base leading-relaxed mb-10 max-w-xs mx-auto">
@@ -52,7 +52,7 @@ export default function Error404() {
         <div className="flex flex-col gap-3 w-full">
           <Link
             to="/"
-            className="inline-flex items-center justify-center gap-2 w-full py-3.5 bg-[#E85D26] text-white text-sm font-semibold font-body rounded-full hover:bg-[#c44d1c] hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200"
+            className="inline-flex items-center justify-center gap-2 w-full py-3.5 bg-[#ff8000] text-white text-sm font-semibold font-body rounded-full hover:bg-[#c44d1c] hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}

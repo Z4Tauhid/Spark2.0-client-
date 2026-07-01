@@ -1,4 +1,5 @@
 import { useRef, useState, useEffect, useCallback } from 'react';
+import { Link } from 'react-router-dom';
 import { FiBookOpen, FiAward, FiZap, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
 function useInView(threshold = 0.1) {
@@ -12,46 +13,50 @@ function useInView(threshold = 0.1) {
   return [ref, inView];
 }
 
+/* ── Shared arrow pill component ── */
+function ArrowPill({ label, orange = false }) {
+  return (
+    <Link
+      to="/register"
+      className={`inline-flex items-center font-body font-bold text-sm text-center px-10 py-4 transition-all duration-200 hover:brightness-110 hover:-translate-y-0.5 active:translate-y-0
+        ${orange ? 'bg-[#ff8000] text-white' : 'bg-[#F2F2F2] text-[#1A224F]'}`}
+      style={{ clipPath: 'polygon(0 0, 92% 0, 100% 50%, 92% 100%, 0 100%, 8% 50%)' }}
+    >
+      {label}
+    </Link>
+  );
+}
+
 const PROGRAMS = [
   {
     title: 'Internship', Icon: FiBookOpen, tag: 'Young Student', featured: false,
     points: ['During studies','Gain general work experience','Usually part of study program','Sometimes unpaid or minimally paid','Assisting existing operations','Part of curriculum (credited)'],
-    hex: (
-      <div className="relative inline-flex items-center">
-        <div className="bg-[#F2F2F2] text-[#1A224F] font-bold text-center px-14 py-5 inline-block"
-          style={{ clipPath: "polygon(0 0, 92% 0, 100% 50%, 92% 100%, 0 100%, 8% 50%)" }}>
-          <p>Young Student</p>
-        </div>
+    arrows: (
+      <div className="flex justify-center">
+        <ArrowPill label="Young Student" orange={false} />
       </div>
     ),
   },
   {
     title: 'Thesis Work', Icon: FiAward, tag: 'Graduate', featured: false,
     points: ['Final three years of study','Complete academic degree with a real case','Mid-degree (usually one semester)','Often compensated by company','Research in a business context','Integral part of degree'],
-    hex: (
-      <div className="relative inline-flex items-center">
-        <div className="bg-[#F2F2F2] text-[#1A224F] font-bold text-center px-14 py-5 inline-block"
-          style={{ clipPath: "polygon(0 0, 92% 0, 100% 50%, 92% 100%, 0 100%, 8% 50%)" }}>
-          <p>Graduate</p>
-        </div>
+    arrows: (
+      <div className="flex justify-center">
+        <ArrowPill label="Graduate" orange={false} />
       </div>
     ),
   },
   {
     title: 'Traineeship', Icon: FiZap, tag: 'Young Professional', featured: true,
     points: ['After graduation','Develop professional skills with clear goals','Long-term (12–24 months)','Usually paid','Independent work, like a junior employee','Not part of studies — professional'],
-    hex: (
-      <div className="flex items-center">
-        <div className="bg-[#E85D26] text-[#1A224F] font-bold text-center px-14 py-5 inline-block"
-          style={{ clipPath: "polygon(0 0, 92% 0, 100% 50%, 92% 100%, 0 100%, 8% 50%)" }}>
-          <p>Young Professional</p>
-        </div>
+    arrows: (
+      <div className="flex flex-col items-center gap-2">
+        <ArrowPill label="Young Professional" orange={true} />
+        <ArrowPill label="New to Finland" orange={true} />
       </div>
     ),
   },
 ];
-
-// const JOURNEY = ['Young Student', 'Graduate', 'Young Professional'];
 
 /* ── Mobile Carousel ── */
 function MobileCarousel() {
@@ -138,7 +143,7 @@ function MobileCarousel() {
         onClick={() => { goTo(active - 1); resetAuto(); }}
         disabled={active === 0}
         aria-label="Previous"
-        className="absolute left-1 top-1/2 -translate-y-8 z-20 bg-white/10 hover:bg-[#E85D26]/80 disabled:opacity-20 transition-colors rounded-full p-2"
+        className="absolute left-1 top-1/2 -translate-y-8 z-20 bg-white/10 hover:bg-[#ff8000]/80 disabled:opacity-20 transition-colors rounded-full p-2"
       >
         <FiChevronLeft className="w-4 h-4 text-white" />
       </button>
@@ -146,7 +151,7 @@ function MobileCarousel() {
         onClick={() => { goTo(active + 1); resetAuto(); }}
         disabled={active === PROGRAMS.length - 1}
         aria-label="Next"
-        className="absolute right-1 top-1/2 -translate-y-8 z-20 bg-white/10 hover:bg-[#E85D26]/80 disabled:opacity-20 transition-colors rounded-full p-2"
+        className="absolute right-1 top-1/2 -translate-y-8 z-20 bg-white/10 hover:bg-[#ff8000]/80 disabled:opacity-20 transition-colors rounded-full p-2"
       >
         <FiChevronRight className="w-4 h-4 text-white" />
       </button>
@@ -187,25 +192,25 @@ function MobileCarousel() {
                 <div
                   className={`relative rounded-2xl border-2 h-full
                     ${p.featured
-                      ? 'border-[#E85D26]/60 shadow-[0_0_32px_rgba(232,93,38,0.18)]'
+                      ? 'border-[#ff8000]/60 shadow-[0_0_32px_rgba(232,93,38,0.18)]'
                       : 'border-white/10'}`}
                   style={{ background: p.featured ? 'rgba(232,93,38,0.07)' : 'rgba(255,255,255,0.04)' }}
                 >
                   {p.featured && (
-                    <span className="absolute top-4 right-4 bg-[#E85D26] text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wide font-body">
+                    <span className="absolute top-4 right-4 bg-[#ff8000] text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wide font-body">
                       Spark's Focus
                     </span>
                   )}
                   <div className="px-6 pt-6 pb-4">
                     <div className="flex items-center gap-3 mb-3">
                       <Icon
-                        className={`w-8 h-8 flex-shrink-0 ${p.featured ? 'text-[#E85D26]' : 'text-white/50'}`}
+                        className={`w-8 h-8 flex-shrink-0 ${p.featured ? 'text-[#ff8000]' : 'text-white/50'}`}
                         strokeWidth={1.8}
                       />
                       <div>
-                        <h3 className="font-display text-lg font-bold text-white">{p.title}</h3>
+                        <h3 className="font-body text-lg font-bold text-white">{p.title}</h3>
                         <span className={`inline-block text-[11px] font-semibold px-2.5 py-0.5 rounded-full mt-1 font-body
-                          ${p.featured ? 'bg-[#E85D26] text-white' : 'bg-white/10 text-white/55'}`}>
+                          ${p.featured ? 'bg-[#ff8000] text-white' : 'bg-white/10 text-white/55'}`}>
                           {p.tag}
                         </span>
                       </div>
@@ -215,7 +220,7 @@ function MobileCarousel() {
                   <ul className="px-6 py-5 space-y-2.5">
                     {p.points.map((pt, j) => (
                       <li key={j} className="flex items-start gap-2.5">
-                        <svg className={`w-4 h-4 mt-0.5 flex-shrink-0 ${p.featured ? 'text-[#E85D26]' : 'text-white/25'}`}
+                        <svg className={`w-4 h-4 mt-0.5 flex-shrink-0 ${p.featured ? 'text-[#ff8000]' : 'text-white/25'}`}
                           fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7"/>
                         </svg>
@@ -223,7 +228,7 @@ function MobileCarousel() {
                       </li>
                     ))}
                   </ul>
-                  <div className="flex justify-center mb-5">{p.hex}</div>
+                  <div className="pb-6 px-6">{p.arrows}</div>
                 </div>
               </div>
             );
@@ -241,7 +246,7 @@ function MobileCarousel() {
             style={{
               width: i === active ? '24px' : '8px',
               height: '8px',
-              background: i === active ? '#E85D26' : 'rgba(255,255,255,0.25)',
+              background: i === active ? '#ff8000' : 'rgba(255,255,255,0.25)',
             }}
             aria-label={`Go to slide ${i + 1}`}
           />
@@ -255,13 +260,12 @@ export default function ProgramTypesSection() {
   const [ref, inView] = useInView();
 
   return (
-    <section className="py-10 bg-[#1a2744]" ref={ref}>
+    <section className="py-10 bg-[#1c244b]" ref={ref}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
         <div className={`text-center mb-5 md:mb-10 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-          <p className="font-body text-[#E85D26] font-semibold text-xs tracking-widest uppercase mb-3">Program Types</p>
-          <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-4">
+          <h2 className="font-body text-3xl sm:text-4xl font-bold text-white mb-4">
             Difference Between Internship, Thesis Work &amp; Traineeship
           </h2>
           <p className="font-body text-white/55 text-base max-w-2xl mx-auto">
@@ -277,7 +281,7 @@ export default function ProgramTypesSection() {
               <div key={p.title}
                 className={`relative rounded-2xl border-2 transition-all duration-300 hover:-translate-y-1
                   ${p.featured
-                    ? 'border-[#E85D26]/60 shadow-[0_0_32px_rgba(232,93,38,0.18)]'
+                    ? 'border-[#ff8000]/60 shadow-[0_0_32px_rgba(232,93,38,0.18)]'
                     : 'border-white/10 hover:border-white/20'}`}
                 style={{
                   background: p.featured ? 'rgba(232,93,38,0.07)' : 'rgba(255,255,255,0.04)',
@@ -285,20 +289,20 @@ export default function ProgramTypesSection() {
                 }}
               >
                 {p.featured && (
-                  <span className="absolute top-4 right-4 bg-[#E85D26] text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wide font-body">
+                  <span className="absolute top-4 right-4 bg-[#ff8000] text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wide font-body">
                     Spark's Focus
                   </span>
                 )}
                 <div className="px-6 pt-6 pb-4">
                   <div className="flex items-center gap-3 mb-3">
                     <Icon
-                      className={`w-8 h-8 flex-shrink-0 ${p.featured ? 'text-[#E85D26]' : 'text-white/50'}`}
+                      className={`w-8 h-8 flex-shrink-0 ${p.featured ? 'text-[#ff8000]' : 'text-white/50'}`}
                       strokeWidth={1.8}
                     />
                     <div>
-                      <h3 className="font-display text-lg font-bold text-white">{p.title}</h3>
+                      <h3 className="font-body text-lg font-bold text-white">{p.title}</h3>
                       <span className={`inline-block text-[11px] font-semibold px-2.5 py-0.5 rounded-full mt-1 font-body
-                        ${p.featured ? 'bg-[#E85D26] text-white' : 'bg-white/10 text-white/55'}`}>
+                        ${p.featured ? 'bg-[#ff8000] text-white' : 'bg-white/10 text-white/55'}`}>
                         {p.tag}
                       </span>
                     </div>
@@ -308,7 +312,7 @@ export default function ProgramTypesSection() {
                 <ul className="px-6 py-5 space-y-2.5">
                   {p.points.map((pt, j) => (
                     <li key={j} className="flex items-start gap-2.5">
-                      <svg className={`w-4 h-4 mt-0.5 flex-shrink-0 ${p.featured ? 'text-[#E85D26]' : 'text-white/25'}`}
+                      <svg className={`w-4 h-4 mt-0.5 flex-shrink-0 ${p.featured ? 'text-[#ff8000]' : 'text-white/25'}`}
                         fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7"/>
                       </svg>
@@ -316,7 +320,7 @@ export default function ProgramTypesSection() {
                     </li>
                   ))}
                 </ul>
-                <div className="flex justify-center mb-5">{p.hex}</div>
+                <div className="pb-6 px-6">{p.arrows}</div>
               </div>
             );
           })}
@@ -327,33 +331,11 @@ export default function ProgramTypesSection() {
           <MobileCarousel />
         </div>
 
-        {/* Journey indicator */}
+        {/* Footer note */}
         <div className={`transition-all duration-700 delay-300 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-          {/* <p className="font-body text-white/30 text-[10px] text-center uppercase tracking-widest mb-5">Career journey</p> */}
-          {/* <div className="flex justify-center overflow-x-auto pb-1">
-            <div className="flex items-stretch">
-              {JOURNEY.map((step, i) => {
-                const active = i === 2;
-                return (
-                  <div key={step} className="flex items-center">
-                    <div className={`px-6 py-3 text-sm font-semibold font-body relative
-                      ${i === 0 ? 'rounded-l-full pl-7' : ''}
-                      ${i === JOURNEY.length - 1 ? 'rounded-r-full pr-7' : ''}
-                      ${active ? 'bg-[#E85D26] text-white' : 'bg-white/10 text-white/55'}`}>
-                      {active && <span className="absolute -top-2 left-1/2 -translate-x-1/2 text-[#E85D26] text-sm leading-none">▼</span>}
-                      {step}
-                    </div>
-                    {i < JOURNEY.length - 1 && (
-                      <div className={`w-0 h-0 border-t-[18px] border-b-[18px] border-l-[12px] border-transparent ${active ? 'border-l-[#E85D26]' : 'border-l-white/10'} -ml-px`} />
-                    )}
-                  </div>
-                );
-              })}
-            </div>
-          </div> */}
           <p className="font-body text-white/45 text-sm text-center mt-3">
             Spark specialises in the{' '}
-            <span className="text-[#E85D26] font-semibold">Young Professional</span>{' '}
+            <span className="text-[#ff8000] font-semibold">Young (or New to Finland) Professional</span>{' '}
             stage — long-term, paid traineeships that build real careers.
           </p>
         </div>

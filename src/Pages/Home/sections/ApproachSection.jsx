@@ -39,7 +39,7 @@ export default function ApproachSection() {
   const [ref, inView] = useInView();
 
   return (
-    <section className="pt-5 pb-3 bg-[#1a2744]" ref={ref}>
+    <section className="pt-5 pb-3 bg-[#1c244b]" ref={ref}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* banner */}
@@ -48,17 +48,17 @@ export default function ApproachSection() {
             style={{ backgroundImage: 'radial-gradient(circle,#fff 1px,transparent 1px)', backgroundSize: '28px 28px' }} />
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="flex items-center gap-1">
-              <span className="font-display font-bold text-white/20 text-5xl sm:text-7xl tracking-tight">spark</span>
-              <span className="w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-[#E85D26]/35 mb-1" />
+              <span className="font-body font-bold text-white/20 text-5xl sm:text-7xl tracking-tight">spark</span>
+              <span className="w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-[#ff8000]/35 mb-1" />
             </div>
           </div>
-          <div className="absolute bottom-0 inset-x-0 h-[3px] bg-gradient-to-r from-[#E85D26] via-[#f07142] to-[#E85D26]" />
+          <div className="absolute bottom-0 inset-x-0 h-[3px] bg-gradient-to-r from-[#ff8000] via-[#f07142] to-[#ff8000]" />
         </div> */}
 
         {/* header */}
         <div className={`text-center mb-5 md:mb-10 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
           <p className="font-body text-white font-semibold text-lg tracking-widest uppercase mb-3">Our Approach</p>
-          <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#E85D26] mb-3">More Than a Recruitment Agency</h2>
+          <h2 className="font-body text-3xl sm:text-4xl font-bold text-[#ff8000] mb-3">More Than a Recruitment Agency</h2>
           <p className="font-body text-gray-300 text-base max-w-3xl mx-auto leading-relaxed">
             Spark Traineeships Oy is a Finnish company dedicated to building stronger connections between young professionals and the working world. We specialise in high-quality traineeship programs combined with personal development, tailored to meet the needs of both Generation Z talent and modern employers.
           </p>
@@ -75,12 +75,12 @@ export default function ApproachSection() {
                 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               style={{ transitionDelay: `${i * 100}ms` }}>
               <div className="flex items-center justify-between mb-5">
-                <div className="w-12 h-12 rounded-xl bg-[#1a2744] flex items-center justify-center">
+                <div className="w-12 h-12 rounded-xl bg-[#1c244b] flex items-center justify-center">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">{s.icon}</svg>
                 </div>
-                <span className="font-display text-4xl font-bold text-gray-300">{s.n}</span>
+                <span className="font-body text-4xl font-bold text-gray-300">{s.n}</span>
               </div>
-              <h3 className="font-display text-lg font-bold text-[#1a2744] mb-2">{s.title}</h3>
+              <h3 className="font-body text-lg font-bold text-[#1a2744] mb-2">{s.title}</h3>
               <p className="font-body text-sm text-gray-500 leading-relaxed">{s.desc}</p>
             </div>
           ))}
@@ -88,7 +88,7 @@ export default function ApproachSection() {
 
         <div className={`text-center mt-5 transition-all duration-700 delay-500 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
           <Link to="/about"
-            className="inline-flex items-center gap-2 px-7 py-3 bg-[#1a2744] text-white text-sm font-semibold font-body rounded-full hover:bg-[#243358] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200">
+            className="inline-flex items-center gap-2 px-7 py-3 bg-[#1c244b] text-white text-sm font-semibold font-body rounded-full hover:bg-[#243358] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200">
             About Us
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3"/>

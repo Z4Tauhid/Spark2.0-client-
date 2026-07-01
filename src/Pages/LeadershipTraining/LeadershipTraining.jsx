@@ -102,7 +102,7 @@ function FAQItem({ q, a }) {
       >
         <span className="font-body font-semibold text-[#1a2744] text-sm leading-snug">{q}</span>
         <FiChevronDown
-          className={`w-4 h-4 text-gray-400 flex-shrink-0 transition-transform duration-300 ${open ? 'rotate-180 text-[#E85D26]' : ''}`}
+          className={`w-4 h-4 text-gray-400 flex-shrink-0 transition-transform duration-300 ${open ? 'rotate-180 text-[#ff8000]' : ''}`}
         />
       </button>
       <div className={`overflow-hidden transition-all duration-300 ${open ? 'max-h-48' : 'max-h-0'}`}>
@@ -129,17 +129,17 @@ export default function LeadershipTraining() {
       {/* ══════════════════════════════════════════
           HERO
       ══════════════════════════════════════════ */}
-      <section className="relative bg-[#1a2744] pt-28 pb-20 sm:pt-32 sm:pb-28 overflow-hidden">
+      <section className="relative bg-[#1c244b] pt-28 pb-20 sm:pt-32 sm:pb-28 overflow-hidden">
         {/* dot grid */}
         <div
           className="absolute inset-0 opacity-[0.05]"
           style={{ backgroundImage: 'radial-gradient(circle,#fff 1px,transparent 1px)', backgroundSize: '32px 32px' }}
         />
         {/* glow */}
-        <div className="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full bg-[#E85D26] opacity-[0.07] blur-[90px] pointer-events-none" />
+        <div className="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full bg-[#ff8000] opacity-[0.07] blur-[90px] pointer-events-none" />
         <div className="absolute bottom-0 -left-24 w-[360px] h-[360px] rounded-full bg-blue-500 opacity-[0.04] blur-[80px] pointer-events-none" />
         {/* top bar */}
-        <div className="absolute top-0 inset-x-0 h-[3px] bg-[#E85D26]" />
+        <div className="absolute top-0 inset-x-0 h-[3px] bg-[#ff8000]" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -147,15 +147,15 @@ export default function LeadershipTraining() {
             {/* Left — copy */}
             <div className={`transition-all duration-700 ease-out ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-6">
-                <span className="w-2 h-2 rounded-full bg-[#E85D26]" />
+                <span className="w-2 h-2 rounded-full bg-[#ff8000]" />
                 <span className="font-body text-white/80 text-[11px] font-semibold tracking-widest uppercase">
                   Personal Development
                 </span>
               </div>
 
-              <h1 className="font-display text-3xl sm:text-5xl font-bold text-white leading-tight mb-6">
+              <h1 className="font-body text-3xl sm:text-5xl font-bold text-white leading-tight mb-6">
                 Personal Leadership{' '}
-                <span className="text-[#E85D26]">Program</span>
+                <span className="text-[#ff8000]">Program</span>
               </h1>
 
               <p className="font-body text-white/65 text-base sm:text-lg leading-relaxed mb-8 max-w-lg">
@@ -170,10 +170,10 @@ export default function LeadershipTraining() {
                   '"What am I capable of?"',
                 ].map((q) => (
                   <div key={q} className="flex items-center gap-3">
-                    <div className="w-6 h-6 rounded-full bg-[#E85D26]/20 border border-[#E85D26]/40 flex items-center justify-center flex-shrink-0">
-                      <FiStar className="w-3 h-3 text-[#E85D26]" />
+                    <div className="w-6 h-6 rounded-full bg-[#ff8000]/20 border border-[#ff8000]/40 flex items-center justify-center flex-shrink-0">
+                      <FiStar className="w-3 h-3 text-[#ff8000]" />
                     </div>
-                    <p className="font-display text-white text-base italic">{q}</p>
+                    <p className="font-body text-white text-base italic">{q}</p>
                   </div>
                 ))}
               </div>
@@ -181,7 +181,7 @@ export default function LeadershipTraining() {
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link
                   to="/register"
-                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-[#E85D26] text-white text-sm font-semibold font-body rounded-full hover:bg-[#c44d1c] hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200"
+                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-[#ff8000] text-white text-sm font-semibold font-body rounded-full hover:bg-[#c44d1c] hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200"
                 >
                   Join the Program
                   <FiArrowRight className="w-4 h-4" />
@@ -210,7 +210,7 @@ export default function LeadershipTraining() {
                   </div>
                   {/* quote card */}
                   <div className="absolute bottom-5 left-5 right-5 bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl p-4">
-                    <p className="font-display text-black text-sm italic leading-relaxed">
+                    <p className="font-body text-black text-sm italic leading-relaxed">
                       "Leadership is not a title. It starts with knowing who you are."
                     </p>
                     <p className="font-body text-black text-xs mt-2">— Spark Leadership Program</p>
@@ -218,9 +218,9 @@ export default function LeadershipTraining() {
                 </div>
 
                 {/* 1:1 badge */}
-                <div className="absolute -top-4 -right-4 w-[76px] h-[76px] rounded-full bg-[#E85D26] shadow-xl flex items-center justify-center">
+                <div className="absolute -top-4 -right-4 w-[76px] h-[76px] rounded-full bg-[#ff8000] shadow-xl flex items-center justify-center">
                   <div className="text-center">
-                    <p className="font-display text-xl font-bold text-white leading-none">1:1</p>
+                    <p className="font-body text-xl font-bold text-white leading-none">1:1</p>
                     <p className="font-body text-white/75 text-[9px] mt-0.5 tracking-wide">Coaching</p>
                   </div>
                 </div>
@@ -260,11 +260,11 @@ export default function LeadershipTraining() {
               },
             ].map((item) => (
               <div key={item.title} className="flex items-start gap-4">
-                <div className="w-11 h-11 rounded-xl bg-[#1a2744]/5 flex items-center justify-center flex-shrink-0">
+                <div className="w-11 h-11 rounded-xl bg-[#1c244b]/5 flex items-center justify-center flex-shrink-0">
                   <item.Icon className="w-5 h-5 text-[#1a2744]" />
                 </div>
                 <div>
-                  <p className="font-display font-bold text-[#1a2744] text-lg leading-none mb-1">{item.title}</p>
+                  <p className="font-body font-bold text-[#1a2744] text-lg leading-none mb-1">{item.title}</p>
                   <p className="font-body text-gray-500 text-sm leading-relaxed">{item.desc}</p>
                 </div>
               </div>
@@ -280,8 +280,8 @@ export default function LeadershipTraining() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           <div className={`text-center mb-12 transition-all duration-700 ${pillarsInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-            <p className="font-body text-[#E85D26] font-semibold text-xs tracking-widest uppercase mb-3">What We Focus On</p>
-            <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#1a2744] mb-3">
+            <p className="font-body text-[#ff8000] font-semibold text-xs tracking-widest uppercase mb-3">What We Focus On</p>
+            <h2 className="font-body text-3xl sm:text-4xl font-bold text-[#1a2744] mb-3">
               Eight Pillars of Development
             </h2>
             <p className="font-body text-gray-500 text-base max-w-xl mx-auto">
@@ -296,7 +296,7 @@ export default function LeadershipTraining() {
                 className={`bg-white rounded-2xl p-5 border border-gray-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 ${pillarsInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
                 style={{ transitionDelay: `${i * 60}ms` }}
               >
-                <div className="w-11 h-11 rounded-xl bg-[#1a2744]/5 flex items-center justify-center mb-4">
+                <div className="w-11 h-11 rounded-xl bg-[#1c244b]/5 flex items-center justify-center mb-4">
                   <pillar.Icon className="w-5 h-5 text-[#1a2744]" />
                 </div>
                 <h3 className="font-body font-bold text-[#1a2744] text-sm mb-2">{pillar.label}</h3>
@@ -314,8 +314,8 @@ export default function LeadershipTraining() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           <div className={`text-center mb-14 transition-all duration-700 ${journeyInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-            <p className="font-body text-[#E85D26] font-semibold text-xs tracking-widest uppercase mb-3">Program Structure</p>
-            <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#1a2744] mb-3">Your Coaching Journey</h2>
+            <p className="font-body text-[#ff8000] font-semibold text-xs tracking-widest uppercase mb-3">Program Structure</p>
+            <h2 className="font-body text-3xl sm:text-4xl font-bold text-[#1a2744] mb-3">Your Coaching Journey</h2>
             <p className="font-body text-gray-500 text-base max-w-xl mx-auto">
               Four phases across twelve sessions — each building on the last, at a pace that fits your life.
             </p>
@@ -334,16 +334,16 @@ export default function LeadershipTraining() {
                 )}
                 {/* step number + duration */}
                 <div className="flex items-center justify-between mb-5">
-                  <div className="w-12 h-12 rounded-xl bg-[#1a2744] flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-xl bg-[#1c244b] flex items-center justify-center">
                     <HiOutlineAcademicCap className="w-6 h-6 text-white" />
                   </div>
-                  <span className="font-display text-4xl font-bold text-gray-100 leading-none">{step.number}</span>
+                  <span className="font-body text-4xl font-bold text-gray-100 leading-none">{step.number}</span>
                 </div>
-                <div className="inline-flex items-center gap-1.5 bg-[#E85D26]/10 text-[#E85D26] text-[10px] font-bold font-body px-2.5 py-1 rounded-full uppercase tracking-wide mb-3">
+                <div className="inline-flex items-center gap-1.5 bg-[#ff8000]/10 text-[#ff8000] text-[10px] font-bold font-body px-2.5 py-1 rounded-full uppercase tracking-wide mb-3">
                   <FiCalendar className="w-3 h-3" />
                   {step.duration}
                 </div>
-                <h3 className="font-display text-lg font-bold text-[#1a2744] mb-2">{step.title}</h3>
+                <h3 className="font-body text-lg font-bold text-[#1a2744] mb-2">{step.title}</h3>
                 <p className="font-body text-sm text-gray-500 leading-relaxed">{step.desc}</p>
               </div>
             ))}
@@ -354,16 +354,16 @@ export default function LeadershipTraining() {
       {/* ══════════════════════════════════════════
           PULL QUOTE
       ══════════════════════════════════════════ */}
-      <section className="py-16 sm:py-20 bg-[#1a2744] relative overflow-hidden" ref={quoteRef}>
+      <section className="py-16 sm:py-20 bg-[#1c244b] relative overflow-hidden" ref={quoteRef}>
         <div
           className="absolute inset-0 opacity-[0.04]"
           style={{ backgroundImage: 'radial-gradient(circle,#fff 1px,transparent 1px)', backgroundSize: '28px 28px' }}
         />
-        <div className="absolute top-0 inset-x-0 h-[3px] bg-[#E85D26]" />
+        <div className="absolute top-0 inset-x-0 h-[3px] bg-[#ff8000]" />
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className={`transition-all duration-700 ${quoteInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-            <HiOutlineSparkles className="w-10 h-10 text-[#E85D26] mx-auto mb-6" />
-            <blockquote className="font-display text-2xl sm:text-3xl font-bold text-white leading-tight mb-6 italic">
+            <HiOutlineSparkles className="w-10 h-10 text-[#ff8000] mx-auto mb-6" />
+            <blockquote className="font-body text-2xl sm:text-3xl font-bold text-white leading-tight mb-6 italic">
               "We don't just help young professionals find work. We support their development as resilient, self-aware future leaders."
             </blockquote>
             <p className="font-body text-white/45 text-sm">— Spark Traineeships Oy</p>
@@ -376,8 +376,8 @@ export default function LeadershipTraining() {
                 { Icon: FiCheck, text: 'In-person, remote, or hybrid' },
               ].map((item) => (
                 <div key={item.text} className="flex items-start gap-3 bg-white/8 border border-white/10 rounded-xl px-4 py-3.5">
-                  <div className="w-5 h-5 rounded-full bg-[#E85D26]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <item.Icon className="w-3 h-3 text-[#E85D26]" />
+                  <div className="w-5 h-5 rounded-full bg-[#ff8000]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <item.Icon className="w-3 h-3 text-[#ff8000]" />
                   </div>
                   <p className="font-body text-white/70 text-xs leading-relaxed">{item.text}</p>
                 </div>
@@ -393,11 +393,11 @@ export default function LeadershipTraining() {
       <section className="py-16 sm:py-24 bg-gray-50" ref={faqRef}>
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className={`text-center mb-12 transition-all duration-700 ${faqInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-            <p className="font-body text-[#E85D26] font-semibold text-xs tracking-widest uppercase mb-3">FAQ</p>
-            <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#1a2744] mb-3">Common Questions</h2>
+            <p className="font-body text-[#ff8000] font-semibold text-xs tracking-widest uppercase mb-3">FAQ</p>
+            <h2 className="font-body text-3xl sm:text-4xl font-bold text-[#1a2744] mb-3">Common Questions</h2>
             <p className="font-body text-gray-500 text-base">
               Still have a question?{' '}
-              <Link to="/contact" className="text-[#E85D26] font-semibold hover:underline">Contact us.</Link>
+              <Link to="/contact" className="text-[#ff8000] font-semibold hover:underline">Contact us.</Link>
             </p>
           </div>
 
@@ -410,7 +410,7 @@ export default function LeadershipTraining() {
       {/* ══════════════════════════════════════════
           CTA
       ══════════════════════════════════════════ */}
-      <section className="py-16 sm:py-20 bg-[#E85D26] relative overflow-hidden" ref={ctaRef}>
+      <section className="py-16 sm:py-20 bg-[#ff8000] relative overflow-hidden" ref={ctaRef}>
         <div
           className="absolute inset-0 opacity-[0.07]"
           style={{ backgroundImage: 'radial-gradient(circle,#fff 1px,transparent 1px)', backgroundSize: '28px 28px' }}
@@ -421,7 +421,7 @@ export default function LeadershipTraining() {
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className={`transition-all duration-700 ${ctaInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
             <p className="font-body text-white/65 font-semibold text-xs tracking-widest uppercase mb-4">Start Your Journey</p>
-            <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-5 leading-tight">
+            <h2 className="font-body text-3xl sm:text-4xl font-bold text-white mb-5 leading-tight">
               Ready to Discover What You're Capable Of?
             </h2>
             <p className="font-body text-white/75 text-base leading-relaxed mb-8 max-w-xl mx-auto">
@@ -430,7 +430,7 @@ export default function LeadershipTraining() {
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link
                 to="/register"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-[#E85D26] text-sm font-bold font-body rounded-full hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-[#ff8000] text-sm font-bold font-body rounded-full hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200"
               >
                 Register as a Trainee
                 <FiArrowRight className="w-4 h-4" />

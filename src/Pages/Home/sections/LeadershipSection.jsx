@@ -32,8 +32,8 @@ export default function LeadershipSection() {
 
           {/* COPY */}
           <div className={`order-2 lg:order-1 transition-all duration-700 ease-out ${inView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
-            <p className="font-body text-[#E85D26] font-semibold text-xs tracking-widest uppercase mb-3">Leadership Program</p>
-            <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#1a2744] leading-tight mb-5">
+            <p className="font-body text-[#ff8000] font-semibold text-xs tracking-widest uppercase mb-3">Leadership Program</p>
+            <h2 className="font-body text-3xl sm:text-4xl font-bold text-[#1a2744] leading-tight mb-5">
               Personal Leadership Program
             </h2>
             <p className="font-body text-gray-600 leading-relaxed mb-4">
@@ -49,15 +49,15 @@ export default function LeadershipSection() {
               {PILLARS.map(({ label, Icon }) => (
                 <div key={label}
                   className="flex items-center gap-2.5 bg-white rounded-xl px-3.5 py-2.5 border border-gray-100 shadow-sm">
-                  <Icon className="w-4 h-4 flex-shrink-0 text-[#E85D26]" strokeWidth={2} />
+                  <Icon className="w-4 h-4 flex-shrink-0 text-[#ff8000]" strokeWidth={2} />
                   <span className="font-body text-xs font-semibold text-[#1a2744] leading-tight">{label}</span>
                 </div>
               ))}
             </div>
 
-            <Link to="/leadership-training"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-[#E85D26] text-white text-sm font-semibold font-body rounded-full hover:bg-[#c44d1c] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200">
-              Learn More
+            <Link to="/register"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-[#ff8000] text-white text-sm font-semibold font-body rounded-full hover:bg-[#c44d1c] hover:shadow-md hover:-translate-y-0.5 transition-all duration-200">
+              Join Now. It's Free!
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3"/>
               </svg>
@@ -75,16 +75,16 @@ export default function LeadershipSection() {
                 />
                 {/* quote overlay */}
                 <div className="absolute bottom-5 left-5 right-5 bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl p-4">
-                  <p className="font-display text-[#1a2744] text-sm italic leading-relaxed">
+                  <p className="font-body text-[#1a2744] text-sm italic leading-relaxed">
                     "Who am I? What do I want? What am I capable of?"
                   </p>
                   <p className="font-body text-[#1a2744] text-xs mt-2">— Core questions of every session</p>
                 </div>
               </div>
               {/* 1:1 badge */}
-              <div className="absolute -top-4 -right-4 w-[72px] h-[72px] rounded-full bg-[#E85D26] shadow-xl flex items-center justify-center">
+              <div className="absolute -top-4 -right-4 w-[72px] h-[72px] rounded-full bg-[#ff8000] shadow-xl flex items-center justify-center">
                 <div className="text-center">
-                  <p className="font-display text-xl font-bold text-white leading-none">1:1</p>
+                  <p className="font-body text-xl font-bold text-white leading-none">1:1</p>
                   <p className="font-body text-white/75 text-[9px] mt-0.5">Coaching</p>
                 </div>
               </div>

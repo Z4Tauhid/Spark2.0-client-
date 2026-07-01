@@ -1,10 +1,10 @@
 import HeroSection           from './sections/HeroSection';
-import StatsSection          from './sections/StatsSection';
+// import StatsSection          from './sections/StatsSection';
 // import AboutSection          from './sections/AboutSection';
 import ProgramTypesSection   from './sections/ProgramTypesSection';
-import ApproachSection       from './sections/ApproachSection';
+// import ApproachSection       from './sections/ApproachSection';
 import LeadershipSection     from './sections/LeadershipSection';
-import DashboardPreviewSection from './sections/DashboardPreviewSection';
+// import DashboardPreviewSection from './sections/DashboardPreviewSection';
 import CTASection            from './sections/CTASection';
 
 export default function Home() {
@@ -12,12 +12,12 @@ export default function Home() {
     <div className="overflow-x-hidden">
       <HeroSection />
       <ProgramTypesSection />
-      <StatsSection />
+      {/* <StatsSection /> */}
       {/* <AboutSection /> */}
       
-      <ApproachSection />
+      {/* <ApproachSection /> */}
       <LeadershipSection />
-      <DashboardPreviewSection />
+      {/* <DashboardPreviewSection /> */}
       <CTASection />
     </div>
   );

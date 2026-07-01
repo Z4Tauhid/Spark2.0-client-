@@ -11,8 +11,8 @@ const QUICK_LINKS = [
 
 const PROGRAMS = [
   { to: '/for-trainees',        label: 'Traineeships' },
-  { to: '/for-trainees',        label: 'Internships' },
-  { to: '/for-trainees',        label: 'Thesis Placements' },
+  // { to: '/for-trainees',        label: 'Internships' },
+  // { to: '/for-trainees',        label: 'Thesis Placements' },
   { to: '/leadership-training', label: 'Leadership Training' },
   { to: '/for-organizations',   label: 'Pilot Program' },
   { to: '/for-organizations',   label: 'EOR Services' },
@@ -52,7 +52,7 @@ export default function Footer() {
             <div className="flex gap-2">
               {SOCIALS.map(s => (
                 <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label}
-                  className="w-9 h-9 rounded-full bg-white/10 hover:bg-[#E85D26] transition-colors duration-200 flex items-center justify-center">
+                  className="w-9 h-9 rounded-full bg-[#ff8000] hover:bg-black transition-colors duration-200 flex items-center justify-center">
                   <span className="font-body text-[11px] font-bold text-white uppercase tracking-wide">{s.abbr}</span>
                 </a>
               ))}
@@ -75,7 +75,7 @@ export default function Footer() {
 
           {/* Programs */}
           <div>
-            <h4 className="font-body text-[11px] font-semibold text-white uppercase tracking-widest mb-5">Programs</h4>
+            <h4 className="font-body text-[11px] font-semibold text-black uppercase tracking-widest mb-5">Programs</h4>
             <ul className="space-y-2.5">
               {PROGRAMS.map((l, i) => (
                 <li key={i}>
@@ -89,18 +89,19 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-body text-[11px] font-semibold text-white uppercase tracking-widest mb-5">Get In Touch</h4>
+            <h4 className="font-body text-[11px] font-semibold text-[#ff8000] uppercase tracking-widest mb-5">Get In Touch</h4>
             <address className="not-italic space-y-2.5">
               <p className="font-body text-sm text-[#1a2744]">Spark Traineeships Oy</p>
               <p className="font-body text-sm text-[#1a2744]">Lahti, Finland</p>
               <a href="tel:+358401234567"
-                className="block font-body text-sm text-[#1a2744] hover:text-white transition-colors duration-150">
+                className="block font-body text-sm text-[#1a2744] hover:text-[#ff8000] transition-colors duration-150">
                 +358 40 123 4567
               </a>
               <a href="mailto:info@sparktraineeships.fi"
-                className="block font-body text-sm text-[#1a2744] hover:text-white transition-colors duration-150 break-all">
+                className="block font-body text-sm text-[#1a2744] hover:text-[#ff8000] transition-colors duration-150 break-all">
                 info@sparktraineeships.fi
               </a>
+              <p className="font-body text-sm text-[#1a2744]">Y-tunnus: 3520898-7</p>
             </address>
           </div>
         </div>

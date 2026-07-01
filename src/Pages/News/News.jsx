@@ -37,20 +37,20 @@ function PageHero({ label, title, subtitle }) {
   }, []);
 
   return (
-    <section className="relative bg-[#1a2744] pt-28 pb-16 sm:pt-32 sm:pb-20 overflow-hidden">
+    <section className="relative bg-[#1c244b] pt-28 pb-16 sm:pt-32 sm:pb-20 overflow-hidden">
       <div
         className="absolute inset-0 opacity-[0.05]"
         style={{ backgroundImage: 'radial-gradient(circle,#fff 1px,transparent 1px)', backgroundSize: '32px 32px' }}
       />
-      <div className="absolute -top-32 -right-32 w-[480px] h-[480px] rounded-full bg-[#E85D26] opacity-[0.07] blur-[90px] pointer-events-none" />
-      <div className="absolute top-0 inset-x-0 h-[3px] bg-[#E85D26]" />
+      <div className="absolute -top-32 -right-32 w-[480px] h-[480px] rounded-full bg-[#ff8000] opacity-[0.07] blur-[90px] pointer-events-none" />
+      <div className="absolute top-0 inset-x-0 h-[3px] bg-[#ff8000]" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`max-w-2xl transition-all duration-700 ease-out ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
           <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-5">
-            <span className="w-2 h-2 rounded-full bg-[#E85D26]" />
+            <span className="w-2 h-2 rounded-full bg-[#ff8000]" />
             <span className="font-body text-white/80 text-[11px] font-semibold tracking-widest uppercase">{label}</span>
           </div>
-          <h1 className="font-display text-3xl sm:text-5xl font-bold text-white leading-tight mb-4">{title}</h1>
+          <h1 className="font-body text-3xl sm:text-5xl font-bold text-white leading-tight mb-4">{title}</h1>
           <p className="font-body text-white/60 text-base sm:text-lg leading-relaxed">{subtitle}</p>
         </div>
       </div>
@@ -78,7 +78,7 @@ const ARTICLES = [
     date: 'June 2, 2025',
     readTime: '4 min read',
     tag: 'Pilot Program',
-    tagColor: 'bg-[#E85D26]/10 text-[#E85D26]',
+    tagColor: 'bg-[#ff8000]/10 text-[#ff8000]',
   },
   {
     id: 2,
@@ -150,7 +150,7 @@ const ARTICLES = [
     date: 'March 15, 2025',
     readTime: '4 min read',
     tag: 'Partnership',
-    tagColor: 'bg-[#E85D26]/10 text-[#E85D26]',
+    tagColor: 'bg-[#ff8000]/10 text-[#ff8000]',
   },
   {
     id: 8,
@@ -189,7 +189,7 @@ function FeaturedCard({ article, inView }) {
           <img src="news.png" alt="" />
         </div>
         {/* featured pill */}
-        <div className="absolute top-4 left-4 inline-flex items-center gap-1.5 bg-[#E85D26] text-white text-[10px] font-bold font-body px-3 py-1.5 rounded-full uppercase tracking-wider">
+        <div className="absolute top-4 left-4 inline-flex items-center gap-1.5 bg-[#ff8000] text-white text-[10px] font-bold font-body px-3 py-1.5 rounded-full uppercase tracking-wider">
           <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
           Featured
         </div>
@@ -210,7 +210,7 @@ function FeaturedCard({ article, inView }) {
             {article.readTime}
           </span>
         </div>
-        <h2 className="font-display text-xl sm:text-2xl font-bold text-[#1a2744] leading-tight mb-3">
+        <h2 className="font-body text-xl sm:text-2xl font-bold text-[#1a2744] leading-tight mb-3">
           {article.title}
         </h2>
         <p className="font-body text-gray-500 text-sm leading-relaxed mb-6">
@@ -218,7 +218,7 @@ function FeaturedCard({ article, inView }) {
         </p>
         <Link
           to={`/news/${article.id}`}
-          className="inline-flex items-center gap-2 text-sm font-semibold font-body text-[#E85D26] hover:gap-3 transition-all duration-200"
+          className="inline-flex items-center gap-2 text-sm font-semibold font-body text-[#ff8000] hover:gap-3 transition-all duration-200"
         >
           Read article <FiArrowRight className="w-4 h-4" />
         </Link>
@@ -255,7 +255,7 @@ function ArticleCard({ article, delay, inView }) {
           </span>
         </div>
 
-        <h3 className="font-display font-bold text-[#1a2744] text-base leading-snug mb-3 flex-1">
+        <h3 className="font-body font-bold text-[#1a2744] text-base leading-snug mb-3 flex-1">
           {article.title}
         </h3>
 
@@ -265,7 +265,7 @@ function ArticleCard({ article, delay, inView }) {
 
         <Link
           to={`/news/${article.id}`}
-          className="inline-flex items-center gap-1.5 text-xs font-semibold font-body text-[#E85D26] hover:gap-2.5 transition-all duration-200 mt-auto"
+          className="inline-flex items-center gap-1.5 text-xs font-semibold font-body text-[#ff8000] hover:gap-2.5 transition-all duration-200 mt-auto"
         >
           Read more <FiChevronRight className="w-3.5 h-3.5" />
         </Link>
@@ -288,19 +288,19 @@ function NewsletterSection() {
   };
 
   return (
-    <section className="py-16 sm:py-20 bg-[#1a2744] relative overflow-hidden" ref={ref}>
+    <section className="py-16 sm:py-20 bg-[#1c244b] relative overflow-hidden" ref={ref}>
       <div
         className="absolute inset-0 opacity-[0.05]"
         style={{ backgroundImage: 'radial-gradient(circle,#fff 1px,transparent 1px)', backgroundSize: '28px 28px' }}
       />
-      <div className="absolute top-0 inset-x-0 h-[3px] bg-[#E85D26]" />
+      <div className="absolute top-0 inset-x-0 h-[3px] bg-[#ff8000]" />
       <div className="relative max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className={`transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-          <div className="w-14 h-14 rounded-2xl bg-[#E85D26]/15 border border-[#E85D26]/30 flex items-center justify-center mx-auto mb-6">
-            <FiRss className="w-7 h-7 text-[#E85D26]" />
+          <div className="w-14 h-14 rounded-2xl bg-[#ff8000]/15 border border-[#ff8000]/30 flex items-center justify-center mx-auto mb-6">
+            <FiRss className="w-7 h-7 text-[#ff8000]" />
           </div>
-          <p className="font-body text-[#E85D26] font-semibold text-xs tracking-widest uppercase mb-3">Stay Informed</p>
-          <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-4 leading-tight">
+          <p className="font-body text-[#ff8000] font-semibold text-xs tracking-widest uppercase mb-3">Stay Informed</p>
+          <h2 className="font-body text-3xl sm:text-4xl font-bold text-white mb-4 leading-tight">
             Get the Latest from Spark
           </h2>
           <p className="font-body text-white/55 text-base leading-relaxed mb-8">
@@ -322,13 +322,13 @@ function NewsletterSection() {
                   onChange={e => setEmail(e.target.value)}
                   required
                   placeholder="your@email.com"
-                  className="w-full pl-10 pr-4 py-3.5 rounded-full bg-white font-body text-sm text-gray-800 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#E85D26]/40"
+                  className="w-full pl-10 pr-4 py-3.5 rounded-full bg-white font-body text-sm text-gray-800 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#ff8000]/40"
                 />
               </div>
               <button
                 type="submit"
                 disabled={status === 'sending'}
-                className="px-6 py-3.5 bg-[#E85D26] text-white font-semibold font-body text-sm rounded-full hover:bg-[#c44d1c] hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 disabled:opacity-60 whitespace-nowrap flex items-center justify-center gap-2"
+                className="px-6 py-3.5 bg-[#ff8000] text-white font-semibold font-body text-sm rounded-full hover:bg-[#c44d1c] hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 disabled:opacity-60 whitespace-nowrap flex items-center justify-center gap-2"
               >
                 {status === 'sending'
                   ? <><div className="w-4 h-4 border-2 border-white/40 border-t-white rounded-full animate-spin" />Subscribing...</>
@@ -384,11 +384,11 @@ export default function News() {
                 className={`flex items-center gap-3 transition-all duration-500 ${statsInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
                 style={{ transitionDelay: `${i * 80}ms` }}
               >
-                <div className="w-10 h-10 rounded-xl bg-[#1a2744]/5 flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 rounded-xl bg-[#1c244b]/5 flex items-center justify-center flex-shrink-0">
                   <s.Icon className="w-5 h-5 text-[#1a2744]" />
                 </div>
                 <div>
-                  <p className="font-display font-bold text-[#1a2744] text-xl leading-none">{s.value}</p>
+                  <p className="font-body font-bold text-[#1a2744] text-xl leading-none">{s.value}</p>
                   <p className="font-body text-gray-400 text-xs mt-0.5">{s.label}</p>
                 </div>
               </div>
@@ -410,7 +410,7 @@ export default function News() {
                   onClick={() => setActiveCategory(cat.id)}
                   className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold font-body whitespace-nowrap transition-all duration-200 flex-shrink-0
                     ${activeCategory === cat.id
-                      ? 'bg-[#1a2744] text-white shadow-sm'
+                      ? 'bg-[#1c244b] text-white shadow-sm'
                       : 'bg-white text-gray-600 border border-gray-200 hover:border-[#1a2744]/30 hover:text-[#1a2744]'
                     }`}
                 >
@@ -428,7 +428,7 @@ export default function News() {
                 value={searchQuery}
                 onChange={e => setSearchQuery(e.target.value)}
                 placeholder="Search articles..."
-                className="w-full sm:w-56 pl-9 pr-4 py-2.5 rounded-full border border-gray-200 bg-white font-body text-sm text-gray-700 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#E85D26]/25 focus:border-[#E85D26] transition-colors"
+                className="w-full sm:w-56 pl-9 pr-4 py-2.5 rounded-full border border-gray-200 bg-white font-body text-sm text-gray-700 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#ff8000]/25 focus:border-[#ff8000] transition-colors"
               />
             </div>
           </div>
@@ -445,11 +445,11 @@ export default function News() {
               <div className="w-16 h-16 rounded-2xl bg-gray-100 flex items-center justify-center mx-auto mb-4">
                 <FiSearch className="w-8 h-8 text-gray-300" />
               </div>
-              <h3 className="font-display text-xl font-bold text-[#1a2744] mb-2">No articles found</h3>
+              <h3 className="font-body text-xl font-bold text-[#1a2744] mb-2">No articles found</h3>
               <p className="font-body text-gray-400 text-sm mb-6">Try a different search term or category.</p>
               <button
                 onClick={() => { setSearchQuery(''); setActiveCategory('all'); }}
-                className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#1a2744] text-white text-sm font-semibold font-body rounded-full hover:bg-[#243358] transition-all duration-200"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#1c244b] text-white text-sm font-semibold font-body rounded-full hover:bg-[#243358] transition-all duration-200"
               >
                 Clear filters
               </button>
@@ -527,7 +527,7 @@ function TopicsSection() {
       Icon: FiUsers,
       title: 'Trainee Success Stories',
       desc: 'Real stories from young professionals who found their path through Spark — in their own words.',
-      accent: 'bg-[#E85D26]/10 text-[#E85D26]',
+      accent: 'bg-[#ff8000]/10 text-[#ff8000]',
     },
     {
       Icon: HiOutlineGlobe,
@@ -545,7 +545,7 @@ function TopicsSection() {
       Icon: HiOutlineSpeakerphone,
       title: 'Program Announcements',
       desc: 'News about new pilots, partnerships, and platform features as Spark continues to grow.',
-      accent: 'bg-[#1a2744]/8 text-[#1a2744]',
+      accent: 'bg-[#1c244b]/8 text-[#1a2744]',
     },
     {
       Icon: FiTrendingUp,
@@ -559,8 +559,8 @@ function TopicsSection() {
     <section className="py-16 sm:py-20 bg-white" ref={ref}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`text-center mb-12 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-          <p className="font-body text-[#E85D26] font-semibold text-xs tracking-widest uppercase mb-3">What We Cover</p>
-          <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#1a2744] mb-3">Topics We Write About</h2>
+          <p className="font-body text-[#ff8000] font-semibold text-xs tracking-widest uppercase mb-3">What We Cover</p>
+          <h2 className="font-body text-3xl sm:text-4xl font-bold text-[#1a2744] mb-3">Topics We Write About</h2>
           <p className="font-body text-gray-500 text-base max-w-xl mx-auto">
             From raw labour market data to human success stories — Spark's newsroom covers the full picture of talent mobility in the region.
           </p>

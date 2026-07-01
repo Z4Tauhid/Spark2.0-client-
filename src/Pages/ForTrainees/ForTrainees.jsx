@@ -29,7 +29,7 @@ function HexBadge({ label, featured }) {
     <div className="flex justify-center mt-5">
       <div
         className={`font-bold text-center px-12 py-4 inline-block
-          ${featured ? 'bg-[#E85D26] text-[#1A224F]' : 'bg-gray-300 text-[#1A224F]'}`}
+          ${featured ? 'bg-[#ff8000] text-[#1A224F]' : 'bg-gray-300 text-[#1A224F]'}`}
         style={{
           clipPath:
             'polygon(0 0, 92% 0, 100% 50%, 92% 100%, 0 100%, 8% 50%)',
@@ -63,12 +63,12 @@ function PageHero() {
   useEffect(() => { const t = setTimeout(() => setVisible(true), 60); return () => clearTimeout(t); }, []);
 
   return (
-    <section className="relative bg-[#1a2744] pt-28 pb-20 sm:pt-36 sm:pb-24 overflow-hidden">
+    <section className="relative bg-[#1c244b] pt-28 pb-20 sm:pt-36 sm:pb-24 overflow-hidden">
       <div className="absolute inset-0 opacity-[0.05]"
         style={{ backgroundImage: 'radial-gradient(circle,#fff 1px,transparent 1px)', backgroundSize: '32px 32px' }} />
-      <div className="absolute -top-32 -right-32 w-[520px] h-[520px] rounded-full bg-[#E85D26] opacity-[0.07] blur-[90px] pointer-events-none" />
+      <div className="absolute -top-32 -right-32 w-[520px] h-[520px] rounded-full bg-[#ff8000] opacity-[0.07] blur-[90px] pointer-events-none" />
       <div className="absolute -bottom-20 -left-20 w-[380px] h-[380px] rounded-full bg-blue-500 opacity-[0.05] blur-[80px] pointer-events-none" />
-      <div className="absolute top-0 inset-x-0 h-[3px] bg-[#E85D26]" />
+      <div className="absolute top-0 inset-x-0 h-[3px] bg-[#ff8000]" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
@@ -76,19 +76,19 @@ function PageHero() {
           {/* copy */}
           <div className={`transition-all duration-700 ease-out ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
             <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-6">
-              <span className="w-2 h-2 rounded-full bg-[#E85D26] animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-[#ff8000] animate-pulse" />
               <span className="font-body text-white/80 text-[11px] font-semibold tracking-widest uppercase">For Trainees</span>
             </div>
-            <h1 className="font-display text-3xl sm:text-5xl font-bold text-white leading-tight mb-5">
+            <h1 className="font-body text-3xl sm:text-5xl font-bold text-white leading-tight mb-5">
               Your Career Starts Here.<br />
-              <span className="text-[#E85D26]">We'll Guide Every Step.</span>
+              <span className="text-[#ff8000]">We'll Guide Every Step.</span>
             </h1>
             <p className="font-body text-white/60 text-base sm:text-lg leading-relaxed mb-8 max-w-lg">
               Spark matches skilled young professionals with Finnish employers who are ready to invest in long-term talent. Free support, real roles, and a personal leadership program — all in one place.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <Link to="/register"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#E85D26] text-white text-sm font-semibold font-body rounded-full hover:bg-[#c44d1c] hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200">
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#ff8000] text-white text-sm font-semibold font-body rounded-full hover:bg-[#c44d1c] hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200">
                 Register — It's Free
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -106,12 +106,12 @@ function PageHero() {
             <div className="grid grid-cols-2 gap-4">
               {[
                 { value: '1,284+', label: 'Open Roles',            sub: 'In Päijät-Häme',               bg: 'bg-white',           text: 'text-[#1a2744]' },
-                { value: '312+',   label: 'Trainee Positions',     sub: 'Right for your level',          bg: 'bg-[#E85D26]',      text: 'text-white' },
+                { value: '312+',   label: 'Trainee Positions',     sub: 'Right for your level',          bg: 'bg-[#ff8000]',      text: 'text-white' },
                 { value: '4 days', label: 'Avg. Time to Match',    sub: 'From sign-up to offer',         bg: 'bg-white/10 border border-white/20', text: 'text-white' },
                 { value: '100%',   label: 'Free for Trainees',     sub: 'No hidden fees, ever',          bg: 'bg-white/10 border border-white/20', text: 'text-white' },
               ].map(s => (
                 <div key={s.label} className={`${s.bg} rounded-2xl p-5`}>
-                  <p className={`font-display text-2xl sm:text-3xl font-bold ${s.text} leading-none mb-1`}>{s.value}</p>
+                  <p className={`font-body text-2xl sm:text-3xl font-bold ${s.text} leading-none mb-1`}>{s.value}</p>
                   <p className={`font-body font-semibold text-sm ${s.text} mb-0.5`}>{s.label}</p>
                   <p className={`font-body text-xs ${s.text === 'text-white' ? 'text-white/50' : 'text-gray-400'}`}>{s.sub}</p>
                 </div>
@@ -130,13 +130,13 @@ function Step({ n, title, desc, delay, inView }) {
     <div className={`flex gap-4 sm:gap-5 transition-all duration-500 ease-out ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
       style={{ transitionDelay: `${delay}ms` }}>
       <div className="flex-shrink-0 flex flex-col items-center">
-        <div className="w-10 h-10 rounded-xl bg-[#E85D26] flex items-center justify-center">
-          <span className="font-display text-sm font-bold text-white">{n}</span>
+        <div className="w-10 h-10 rounded-xl bg-[#ff8000] flex items-center justify-center">
+          <span className="font-body text-sm font-bold text-white">{n}</span>
         </div>
         {n < 5 && <div className="w-px flex-1 bg-gray-200 mt-2 min-h-[32px]" />}
       </div>
       <div className="pb-6 sm:pb-8 flex-1 min-w-0">
-        <h3 className="font-display text-lg font-bold text-[#1a2744] mb-1.5">{title}</h3>
+        <h3 className="font-body text-lg font-bold text-[#1a2744] mb-1.5">{title}</h3>
         <p className="font-body text-gray-500 text-sm leading-relaxed">{desc}</p>
       </div>
     </div>
@@ -149,7 +149,7 @@ function BenefitCard({ emoji, title, desc, delay, inView }) {
     <div className={`bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
       style={{ transitionDelay: `${delay}ms` }}>
       <div className="text-3xl mb-4">{emoji}</div>
-      <h3 className="font-display text-base font-bold text-[#1a2744] mb-2">{title}</h3>
+      <h3 className="font-body text-base font-bold text-[#1a2744] mb-2">{title}</h3>
       <p className="font-body text-gray-500 text-sm leading-relaxed">{desc}</p>
     </div>
   );
@@ -171,19 +171,19 @@ function RoleCard({
       className={`relative rounded-2xl border-2 p-6 transition-all duration-300 hover:-translate-y-1
       ${
         featured
-          ? 'border-[#E85D26]/50 bg-[#E85D26]/5 shadow-[0_0_24px_rgba(232,93,38,0.12)]'
+          ? 'border-[#ff8000]/50 bg-[#ff8000]/5 shadow-[0_0_24px_rgba(232,93,38,0.12)]'
           : 'border-gray-100 bg-white shadow-sm hover:shadow-md '
       }`}
     >
       {featured && (
-        <span className="absolute top-4 right-4 bg-[#E85D26] text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wide font-body">
+        <span className="absolute top-4 right-4 bg-[#ff8000] text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wide font-body">
           Best Fit
         </span>
       )}
 
       <div className="text-3xl mb-4">{emoji}</div>
 
-      <h3 className={`font-display text-lg font-bold mb-3 ${ featured ? 'text-white' : 'text-[#1a2744]'}`}>
+      <h3 className={`font-body text-lg font-bold mb-3 ${ featured ? 'text-white' : 'text-[#1a2744]'}`}>
         {title}
         </h3>
 
@@ -220,8 +220,8 @@ function RoleCard({
         className={`inline-block text-[11px] font-semibold px-3 py-1 rounded-full font-body
         ${
           featured
-            ? 'bg-[#E85D26] text-white'
-            : 'bg-[#1a2744]/8 text-[#1a2744]'
+            ? 'bg-[#ff8000] text-white'
+            : 'bg-[#1c244b]/8 text-[#1a2744]'
         }`}
       >
         {tag}
@@ -253,7 +253,7 @@ function TestimonialCard({ quote, name, role, emoji, delay, inView }) {
       <div className="text-2xl mb-4">❝</div>
       <p className="font-body text-gray-600 text-sm leading-relaxed mb-5 italic">"{quote}"</p>
       <div className="flex items-center gap-3">
-        <div className="w-10 h-10 rounded-xl bg-[#1a2744]/8 flex items-center justify-center text-xl flex-shrink-0">{emoji}</div>
+        <div className="w-10 h-10 rounded-xl bg-[#1c244b]/8 flex items-center justify-center text-xl flex-shrink-0">{emoji}</div>
         <div>
           <p className="font-body font-semibold text-[#1a2744] text-sm">{name}</p>
           <p className="font-body text-gray-400 text-xs">{role}</p>
@@ -303,7 +303,7 @@ const ROLE_TYPES = [
     featured: false,
   },
   {
-    emoji: <BsFillRocketTakeoffFill className="text-[#E85D26]" />,
+    emoji: <BsFillRocketTakeoffFill className="text-[#ff8000]" />,
     title: 'Traineeship',
     duration: '12 to 24 months',
     pay: 'Usually paid',
@@ -361,8 +361,8 @@ export default function ForTrainees() {
 
             {/* sticky label */}
             <div className={`transition-all duration-700 ${stepsInView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-6'}`}>
-              <p className="font-body text-[#E85D26] font-semibold text-xs tracking-widest uppercase mb-3">The Process</p>
-              <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#1a2744] leading-tight mb-5">
+              <p className="font-body text-[#ff8000] font-semibold text-xs tracking-widest uppercase mb-3">The Process</p>
+              <h2 className="font-body text-3xl sm:text-4xl font-bold text-[#1a2744] leading-tight mb-5">
                 How Spark Works for Trainees
               </h2>
               <p className="font-body text-gray-500 text-base leading-relaxed mb-8">
@@ -374,7 +374,7 @@ export default function ForTrainees() {
                 <div className="space-y-2">
                   {['Human review — not an algorithm', 'Avg. 4-day time to match', 'Free leadership coaching included', 'Active support during the whole placement'].map(t => (
                     <div key={t} className="flex items-center gap-2.5">
-                      <svg className="w-4 h-4 text-[#E85D26] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <svg className="w-4 h-4 text-[#ff8000] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
                       </svg>
                       <span className="font-body text-sm text-gray-600">{t}</span>
@@ -396,8 +396,8 @@ export default function ForTrainees() {
       <section className="py-16 sm:py-24 bg-gray-50" ref={benefitsRef}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className={`text-center mb-12 transition-all duration-700 ${benefitsInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-            <p className="font-body text-[#E85D26] font-semibold text-xs tracking-widest uppercase mb-3">Why Choose Spark</p>
-            <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#1a2744] mb-3">What You Get</h2>
+            <p className="font-body text-[#ff8000] font-semibold text-xs tracking-widest uppercase mb-3">Why Choose Spark</p>
+            <h2 className="font-body text-3xl sm:text-4xl font-bold text-[#1a2744] mb-3">What You Get</h2>
             <p className="font-body text-gray-500 text-base max-w-xl mx-auto">
               Beyond just a job — a complete package of support, development, and genuine opportunity.
             </p>
@@ -409,11 +409,11 @@ export default function ForTrainees() {
       </section>
 
       {/* ── Role Types ── */}
-      <section className="py-16 sm:py-24 bg-[#1a2744]" ref={rolesRef}>
+      <section className="py-16 sm:py-24 bg-[#1c244b]" ref={rolesRef}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className={`text-center mb-12 transition-all duration-700 ${rolesInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-            <p className="font-body text-[#E85D26] font-semibold text-xs tracking-widest uppercase mb-3">Program Types</p>
-            <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-3">
+            <p className="font-body text-[#ff8000] font-semibold text-xs tracking-widest uppercase mb-3">Program Types</p>
+            <h2 className="font-body text-3xl sm:text-4xl font-bold text-white mb-3">
               Which Path Is Right for You?
             </h2>
             <p className="font-body text-white/55 text-base max-w-xl mx-auto">
@@ -441,13 +441,13 @@ export default function ForTrainees() {
                       <div className={`relative px-5 sm:px-6 py-3 text-xs sm:text-sm font-semibold font-body
                         ${i === 0 ? 'rounded-l-full pl-6 sm:pl-8' : ''}
                         ${i === 2 ? 'rounded-r-full pr-6 sm:pr-8' : ''}
-                        ${active ? 'bg-[#E85D26] text-white' : 'bg-white/10 text-white/50'}`}>
-                        {active && <span className="absolute -top-2 left-1/2 -translate-x-1/2 text-[#E85D26] text-xs leading-none">▼</span>}
+                        ${active ? 'bg-[#ff8000] text-white' : 'bg-white/10 text-white/50'}`}>
+                        {active && <span className="absolute -top-2 left-1/2 -translate-x-1/2 text-[#ff8000] text-xs leading-none">▼</span>}
                         {step}
                       </div>
                       {i < 2 && (
                         <div className={`w-0 h-0 border-t-[18px] border-b-[18px] border-l-[12px] border-transparent -ml-px
-                          ${active ? 'border-l-[#E85D26]' : 'border-l-white/10'}`} />
+                          ${active ? 'border-l-[#ff8000]' : 'border-l-white/10'}`} />
                       )}
                     </div>
                   );
@@ -463,8 +463,8 @@ export default function ForTrainees() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
             <div className={`transition-all duration-700 ${langInView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-6'}`}>
-              <p className="font-body text-[#E85D26] font-semibold text-xs tracking-widest uppercase mb-3">Multilingual</p>
-              <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#1a2744] leading-tight mb-5">
+              <p className="font-body text-[#ff8000] font-semibold text-xs tracking-widest uppercase mb-3">Multilingual</p>
+              <h2 className="font-body text-3xl sm:text-4xl font-bold text-[#1a2744] leading-tight mb-5">
                 You Don't Need to Speak Finnish Fluently
               </h2>
               <p className="font-body text-gray-500 text-base leading-relaxed mb-4">
@@ -473,7 +473,7 @@ export default function ForTrainees() {
               <p className="font-body text-gray-500 text-base leading-relaxed mb-6">
                 Whether your strongest language is English, Arabic, Russian, or something else — Spark will find the right fit for you.
               </p>
-              <div className="flex items-center gap-2.5 bg-[#1a2744]/5 rounded-xl px-4 py-3 border border-[#1a2744]/10 w-fit">
+              <div className="flex items-center gap-2.5 bg-[#1c244b]/5 rounded-xl px-4 py-3 border border-[#1a2744]/10 w-fit">
                 <span className="text-lg">🌍</span>
                 <span className="font-body text-sm font-semibold text-[#1a2744]">44+ multilingual employers actively hiring</span>
               </div>
@@ -492,8 +492,8 @@ export default function ForTrainees() {
       <section className="py-16 sm:py-24 bg-gray-50" ref={testRef}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className={`text-center mb-12 transition-all duration-700 ${testInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-            <p className="font-body text-[#E85D26] font-semibold text-xs tracking-widest uppercase mb-3">Trainee Stories</p>
-            <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#1a2744] mb-3">Voices From Our Community</h2>
+            <p className="font-body text-[#ff8000] font-semibold text-xs tracking-widest uppercase mb-3">Trainee Stories</p>
+            <h2 className="font-body text-3xl sm:text-4xl font-bold text-[#1a2744] mb-3">Voices From Our Community</h2>
             <p className="font-body text-gray-500 text-base max-w-lg mx-auto">
               Real experiences from trainees who found their path through Spark. Replace these with actual testimonials.
             </p>
@@ -508,16 +508,16 @@ export default function ForTrainees() {
       <section className="py-16 sm:py-20 bg-white" ref={eligRef}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className={`transition-all duration-700 ${eligInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-            <div className="bg-[#1a2744] rounded-2xl overflow-hidden">
+            <div className="bg-[#1c244b] rounded-2xl overflow-hidden">
               <div className="p-6 sm:p-8">
-                <p className="font-body text-[#E85D26] font-semibold text-xs tracking-widest uppercase mb-3">Before You Apply</p>
-                <h2 className="font-display text-2xl sm:text-3xl font-bold text-white mb-6">Am I Eligible?</h2>
+                <p className="font-body text-[#ff8000] font-semibold text-xs tracking-widest uppercase mb-3">Before You Apply</p>
+                <h2 className="font-body text-2xl sm:text-3xl font-bold text-white mb-6">Am I Eligible?</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {ELIGIBILITY.map((item, i) => (
                     <div key={i}
                       className={`flex items-start gap-3 bg-white/5 rounded-xl p-4 border border-white/10 transition-all duration-400 ${eligInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
                       style={{ transitionDelay: `${i * 70}ms` }}>
-                      <svg className="w-4 h-4 text-[#E85D26] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <svg className="w-4 h-4 text-[#ff8000] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
                       </svg>
                       <p className="font-body text-white/75 text-sm leading-snug">{item}</p>
@@ -525,7 +525,7 @@ export default function ForTrainees() {
                   ))}
                 </div>
                 <p className="font-body text-white/40 text-xs mt-5">
-                  Not sure if you qualify? <Link to="/contact" className="text-[#E85D26] hover:underline font-semibold">Send us a message</Link> — we'll tell you honestly.
+                  Not sure if you qualify? <Link to="/contact" className="text-[#ff8000] hover:underline font-semibold">Send us a message</Link> — we'll tell you honestly.
                 </p>
               </div>
             </div>
@@ -534,7 +534,7 @@ export default function ForTrainees() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="py-16 sm:py-20 bg-[#E85D26] relative overflow-hidden" ref={ctaRef}>
+      <section className="py-16 sm:py-20 bg-[#ff8000] relative overflow-hidden" ref={ctaRef}>
         <div className="absolute inset-0 opacity-[0.07]"
           style={{ backgroundImage: 'radial-gradient(circle,#fff 1px,transparent 1px)', backgroundSize: '28px 28px' }} />
         <div className="absolute -top-20 -right-20 w-56 h-56 rounded-full bg-white/10 pointer-events-none" />
@@ -542,7 +542,7 @@ export default function ForTrainees() {
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className={`transition-all duration-700 ${ctaInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
             <p className="font-body text-white/65 font-semibold text-xs tracking-widest uppercase mb-4">Take the First Step</p>
-            <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-5 leading-tight">
+            <h2 className="font-body text-3xl sm:text-4xl font-bold text-white mb-5 leading-tight">
               Ready to Find Your Place in Finland?
             </h2>
             <p className="font-body text-white/75 text-base leading-relaxed mb-8 max-w-xl mx-auto">
@@ -550,7 +550,7 @@ export default function ForTrainees() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link to="/register"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-[#E85D26] text-sm font-bold font-body rounded-full hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200">
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-[#ff8000] text-sm font-bold font-body rounded-full hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200">
                 Register — It's Free
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3"/>

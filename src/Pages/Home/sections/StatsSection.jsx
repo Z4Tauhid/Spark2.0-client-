@@ -20,7 +20,7 @@ function useCountUp(target, duration, active) {
 const STATS = [
   {
     value: 1284, suffix: '+', label: 'Open Roles', sub: 'Across Päijät-Häme',
-    bg: 'bg-orange-50', iconColor: 'text-[#E85D26]',
+    bg: 'bg-orange-50', iconColor: 'text-[#ff8000]',
     icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />,
   },
   {
@@ -49,7 +49,7 @@ function StatCard({ stat, active }) {
           {stat.icon}
         </svg>
       </div>
-      <p className="font-display text-xl md:text-4xl font-bold text-[#1a2744] mb-1 tabular-nums">
+      <p className="font-body text-xl md:text-4xl font-bold text-[#1a2744] mb-1 tabular-nums">
         {count.toLocaleString()}{stat.suffix}
       </p>
       <p className="font-body font-semibold text-[#1a2744] text-sm mb-1">{stat.label}</p>
@@ -71,8 +71,8 @@ export default function StatsSection() {
     <section className="bg-gray-50 py-8 md:py-16 sm:py-20" ref={ref}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-5 md:mb-10">
-          <p className="font-body text-[#E85D26] font-semibold text-xs tracking-widest uppercase mb-3">Live Ecosystem Metrics</p>
-          <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#1a2744]">The Region's Talent Pulse</h2>
+          <p className="font-body text-[#ff8000] font-semibold text-xs tracking-widest uppercase mb-3">Live Ecosystem Metrics</p>
+          <h2 className="font-body text-3xl sm:text-4xl font-bold text-[#1a2744]">The Region's Talent Pulse</h2>
           <p className="font-body text-gray-500 text-base mt-3 max-w-xl mx-auto">
             Real data from Päijät-Häme's job market, updated continuously to show where opportunities exist right now.
           </p>

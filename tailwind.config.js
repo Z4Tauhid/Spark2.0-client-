@@ -13,15 +13,15 @@ export default {
           light:   '#243358',
         },
         orange: {
-          spark: '#E85D26',
+          spark: '#ff8000',
           light: '#f07142',
           dark:  '#c44d1c',
         }
       },
-      fontFamily: {
-        display: ['Playfair Display', 'Georgia', 'serif'],
-        body:    ['DM Sans', 'system-ui', 'sans-serif'],
-      },
+     fontFamily: {
+  display: ['Playfair Display', 'Georgia', 'serif'],
+  body:    ['Montserrat', 'system-ui', 'sans-serif'],
+},
     },
   },
   plugins: [],

@@ -21,18 +21,18 @@ function PageHero({ label, title, subtitle }) {
   const [visible, setVisible] = useState(false);
   useEffect(() => { const t = setTimeout(() => setVisible(true), 60); return () => clearTimeout(t); }, []);
   return (
-    <section className="relative bg-[#1a2744] pt-28 pb-16 sm:pt-32 sm:pb-20 overflow-hidden">
+    <section className="relative bg-[#1c244b] pt-28 pb-16 sm:pt-32 sm:pb-20 overflow-hidden">
       <div className="absolute inset-0 opacity-[0.05]"
         style={{ backgroundImage: 'radial-gradient(circle,#fff 1px,transparent 1px)', backgroundSize: '32px 32px' }} />
-      <div className="absolute -top-32 -right-32 w-[480px] h-[480px] rounded-full bg-[#E85D26] opacity-[0.07] blur-[90px] pointer-events-none" />
-      <div className="absolute top-0 inset-x-0 h-[3px] bg-[#E85D26]" />
+      <div className="absolute -top-32 -right-32 w-[480px] h-[480px] rounded-full bg-[#ff8000] opacity-[0.07] blur-[90px] pointer-events-none" />
+      <div className="absolute top-0 inset-x-0 h-[3px] bg-[#ff8000]" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`max-w-2xl transition-all duration-700 ease-out ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
           <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-5">
-            <span className="w-2 h-2 rounded-full bg-[#E85D26]" />
+            <span className="w-2 h-2 rounded-full bg-[#ff8000]" />
             <span className="font-body text-white/80 text-[11px] font-semibold tracking-widest uppercase">{label}</span>
           </div>
-          <h1 className="font-display text-3xl sm:text-5xl font-bold text-white leading-tight mb-4">{title}</h1>
+          <h1 className="font-body text-3xl sm:text-5xl font-bold text-white leading-tight mb-4">{title}</h1>
           <p className="font-body text-white/60 text-base sm:text-lg leading-relaxed">{subtitle}</p>
         </div>
       </div>
@@ -94,7 +94,7 @@ function FAQItem({ q, a }) {
         className="w-full flex items-center justify-between gap-4 px-5 py-4 text-left bg-white hover:bg-gray-50 transition-colors"
       >
         <span className="font-body font-semibold text-[#1a2744] text-sm leading-snug">{q}</span>
-        <span className={`flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center transition-all duration-300 ${open ? 'bg-[#E85D26] rotate-45' : 'bg-gray-100'}`}>
+        <span className={`flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center transition-all duration-300 ${open ? 'bg-[#ff8000] rotate-45' : 'bg-gray-100'}`}>
           <svg className={`w-3 h-3 ${open ? 'text-white' : 'text-gray-500'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 4v16m8-8H4" />
           </svg>
@@ -140,8 +140,8 @@ export default function Contact() {
             {/* ── Contact Form (3/5) ── */}
             <div className="lg:col-span-3" ref={formRef}>
               <div className={`transition-all duration-700 ease-out ${formInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-                <p className="font-body text-[#E85D26] font-semibold text-xs tracking-widest uppercase mb-3">Send a Message</p>
-                <h2 className="font-display text-2xl sm:text-3xl font-bold text-[#1a2744] mb-7">We'd Love to Hear From You</h2>
+                <p className="font-body text-[#ff8000] font-semibold text-xs tracking-widest uppercase mb-3">Send a Message</p>
+                <h2 className="font-body text-2xl sm:text-3xl font-bold text-[#1a2744] mb-7">We'd Love to Hear From You</h2>
 
                 {status === 'sent' ? (
                   <div className="bg-green-50 border border-green-100 rounded-2xl p-8 text-center">
@@ -150,10 +150,10 @@ export default function Contact() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
-                    <h3 className="font-display text-xl font-bold text-[#1a2744] mb-2">Message Sent!</h3>
+                    <h3 className="font-body text-xl font-bold text-[#1a2744] mb-2">Message Sent!</h3>
                     <p className="font-body text-gray-500 text-sm">We'll get back to you within one business day.</p>
                     <button onClick={() => { setStatus('idle'); setForm({ name:'', email:'', role:'trainee', subject:'', message:'' }); }}
-                      className="mt-6 font-body text-sm text-[#E85D26] font-semibold hover:underline">
+                      className="mt-6 font-body text-sm text-[#ff8000] font-semibold hover:underline">
                       Send another message
                     </button>
                   </div>
@@ -165,13 +165,13 @@ export default function Contact() {
                         <label className="block font-body text-sm font-medium text-[#1a2744] mb-1.5">Full Name *</label>
                         <input type="text" name="name" value={form.name} onChange={handleChange} required
                           placeholder="Your full name"
-                          className="w-full px-4 py-3 rounded-xl border border-gray-200 font-body text-sm focus:outline-none focus:ring-2 focus:ring-[#E85D26]/25 focus:border-[#E85D26] transition-colors bg-white" />
+                          className="w-full px-4 py-3 rounded-xl border border-gray-200 font-body text-sm focus:outline-none focus:ring-2 focus:ring-[#ff8000]/25 focus:border-[#ff8000] transition-colors bg-white" />
                       </div>
                       <div>
                         <label className="block font-body text-sm font-medium text-[#1a2744] mb-1.5">Email Address *</label>
                         <input type="email" name="email" value={form.email} onChange={handleChange} required
                           placeholder="you@example.com"
-                          className="w-full px-4 py-3 rounded-xl border border-gray-200 font-body text-sm focus:outline-none focus:ring-2 focus:ring-[#E85D26]/25 focus:border-[#E85D26] transition-colors bg-white" />
+                          className="w-full px-4 py-3 rounded-xl border border-gray-200 font-body text-sm focus:outline-none focus:ring-2 focus:ring-[#ff8000]/25 focus:border-[#ff8000] transition-colors bg-white" />
                       </div>
                     </div>
 
@@ -187,7 +187,7 @@ export default function Contact() {
                           <button type="button" key={opt.value}
                             onClick={() => setForm(p => ({ ...p, role: opt.value }))}
                             className={`h-30 w-30 py-3 px-3 rounded-xl border-2 font-body text-xs font-semibold transition-all duration-150
-                              ${form.role === opt.value ? 'border-[#E85D26] bg-[#E85D26]/5 text-[#E85D26]' : 'border-gray-200 text-gray-600 hover:border-gray-300'}`}>
+                              ${form.role === opt.value ? 'border-[#ff8000] bg-[#ff8000]/5 text-[#ff8000]' : 'border-gray-200 text-gray-600 hover:border-gray-300'}`}>
                             {opt.label}
                           </button>
                         ))}
@@ -199,7 +199,7 @@ export default function Contact() {
                       <label className="block font-body text-sm font-medium text-[#1a2744] mb-1.5">Subject *</label>
                       <input type="text" name="subject" value={form.subject} onChange={handleChange} required
                         placeholder="What is this about?"
-                        className="w-full px-4 py-3 rounded-xl border border-gray-200 font-body text-sm focus:outline-none focus:ring-2 focus:ring-[#E85D26]/25 focus:border-[#E85D26] transition-colors bg-white" />
+                        className="w-full px-4 py-3 rounded-xl border border-gray-200 font-body text-sm focus:outline-none focus:ring-2 focus:ring-[#ff8000]/25 focus:border-[#ff8000] transition-colors bg-white" />
                     </div>
 
                     {/* Message */}
@@ -207,11 +207,11 @@ export default function Contact() {
                       <label className="block font-body text-sm font-medium text-[#1a2744] mb-1.5">Message *</label>
                       <textarea name="message" value={form.message} onChange={handleChange} required rows={5}
                         placeholder="Tell us more..."
-                        className="w-full px-4 py-3 rounded-xl border border-gray-200 font-body text-sm focus:outline-none focus:ring-2 focus:ring-[#E85D26]/25 focus:border-[#E85D26] transition-colors bg-white resize-none" />
+                        className="w-full px-4 py-3 rounded-xl border border-gray-200 font-body text-sm focus:outline-none focus:ring-2 focus:ring-[#ff8000]/25 focus:border-[#ff8000] transition-colors bg-white resize-none" />
                     </div>
 
                     <button type="submit" disabled={status === 'sending'}
-                      className="w-full py-3.5 bg-[#E85D26] text-white font-semibold font-body text-sm rounded-full hover:bg-[#c44d1c] hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2">
+                      className="w-full py-3.5 bg-[#ff8000] text-white font-semibold font-body text-sm rounded-full hover:bg-[#c44d1c] hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2">
                       {status === 'sending' ? (
                         <><div className="w-4 h-4 border-2 border-white/40 border-t-white rounded-full animate-spin" />Sending...</>
                       ) : (
@@ -229,7 +229,7 @@ export default function Contact() {
                 {CONTACT_INFO.map(info => (
                   <div key={info.title} className="bg-gray-50 rounded-2xl p-5 border border-gray-100">
                     <div className="flex items-start gap-4">
-                      <div className="w-10 h-10 rounded-xl bg-[#1a2744] flex items-center justify-center flex-shrink-0">
+                      <div className="w-10 h-10 rounded-xl bg-[#1c244b] flex items-center justify-center flex-shrink-0">
                         <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           {info.icon}
                         </svg>
@@ -237,7 +237,7 @@ export default function Contact() {
                       <div>
                         <p className="font-body font-semibold text-[#1a2744] text-sm mb-1">{info.title}</p>
                         {info.href ? (
-                          <a href={info.href} className="font-body text-sm text-gray-500 hover:text-[#E85D26] transition-colors leading-relaxed">
+                          <a href={info.href} className="font-body text-sm text-gray-500 hover:text-[#ff8000] transition-colors leading-relaxed">
                             {info.lines[0]}
                           </a>
                         ) : (
@@ -251,7 +251,7 @@ export default function Contact() {
                 ))}
 
                 {/* Social links */}
-                <div className="bg-[#1a2744] rounded-2xl p-5">
+                <div className="bg-[#1c244b] rounded-2xl p-5">
                   <p className="font-body font-semibold text-white text-sm mb-4">Follow Spark</p>
                   <div className="flex gap-2">
                     {[
@@ -261,7 +261,7 @@ export default function Contact() {
                       { label: 'TikTok',    abbr: 'tt', href: 'https://tiktok.com' },
                     ].map(s => (
                       <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label}
-                        className="w-9 h-9 rounded-full bg-white/10 hover:bg-[#E85D26] transition-colors duration-200 flex items-center justify-center">
+                        className="w-9 h-9 rounded-full bg-white/10 hover:bg-[#ff8000] transition-colors duration-200 flex items-center justify-center">
                         <span className="font-body text-[11px] font-bold text-white uppercase">{s.abbr}</span>
                       </a>
                     ))}
@@ -277,8 +277,8 @@ export default function Contact() {
       <section className="py-16 sm:py-24 bg-gray-50" ref={faqRef}>
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className={`text-center mb-12 transition-all duration-700 ${faqInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-            <p className="font-body text-[#E85D26] font-semibold text-xs tracking-widest uppercase mb-3">FAQ</p>
-            <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#1a2744] mb-3">Common Questions</h2>
+            <p className="font-body text-[#ff8000] font-semibold text-xs tracking-widest uppercase mb-3">FAQ</p>
+            <h2 className="font-body text-3xl sm:text-4xl font-bold text-[#1a2744] mb-3">Common Questions</h2>
             <p className="font-body text-gray-500 text-base">Can't find your answer? Send us a message above.</p>
           </div>
           <div className={`space-y-3 transition-all duration-700 delay-100 ${faqInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>

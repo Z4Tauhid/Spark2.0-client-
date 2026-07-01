@@ -92,11 +92,11 @@ function MobileCarousel({ items }) {
     <div className="relative select-none">
       {/* arrows */}
       <button onClick={() => goTo(active - 1)} aria-label="Previous"
-        className="absolute left-0 top-1/2 -translate-y-10 z-20 bg-[#1a2744]/8 hover:bg-[#E85D26]/80 transition-colors rounded-full p-2 -ml-1">
+        className="absolute left-0 top-1/2 -translate-y-10 z-20 bg-[#1c244b]/8 hover:bg-[#ff8000]/80 transition-colors rounded-full p-2 -ml-1">
         <FiChevronLeft className="w-4 h-4 text-[#1a2744]" />
       </button>
       <button onClick={() => goTo(active + 1)} aria-label="Next"
-        className="absolute right-0 top-1/2 -translate-y-10 z-20 bg-[#1a2744]/8 hover:bg-[#E85D26]/80 transition-colors rounded-full p-2 -mr-1">
+        className="absolute right-0 top-1/2 -translate-y-10 z-20 bg-[#1c244b]/8 hover:bg-[#ff8000]/80 transition-colors rounded-full p-2 -mr-1">
         <FiChevronRight className="w-4 h-4 text-[#1a2744]" />
       </button>
 
@@ -126,7 +126,7 @@ function MobileCarousel({ items }) {
                 transition: 'opacity 0.42s ease, transform 0.42s ease',
                 pointerEvents: dist === 0 ? 'auto' : 'none',
               }}>
-                <div className="p-5 rounded-2xl border shadow-sm bg-[#1a2744] h-full">
+                <div className="p-5 rounded-2xl border shadow-sm bg-[#1c244b] h-full">
                   <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-[#1a2744] mb-4">
                     <Icon className="w-5 h-5" strokeWidth={1.8} />
                   </div>
@@ -146,7 +146,7 @@ function MobileCarousel({ items }) {
             style={{
               width: i === active ? 20 : 8, height: 8,
               borderRadius: 9999, border: 'none', cursor: 'pointer', padding: 0,
-              background: i === active ? '#E85D26' : 'rgba(26,39,68,0.18)',
+              background: i === active ? '#ff8000' : 'rgba(26,39,68,0.18)',
               transition: 'width 0.3s ease, background 0.3s ease',
             }} />
         ))}
@@ -165,8 +165,8 @@ export default function DashboardPreviewSection() {
 
         {/* header */}
         <div className={`max-w-2xl mb-4 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-          <p className="font-body text-[#E85D26] font-semibold text-xs tracking-widest uppercase mb-3">Coming Soon</p>
-          <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#1a2744] mb-3">
+          <p className="font-body text-[#ff8000] font-semibold text-xs tracking-widest uppercase mb-3">Coming Soon</p>
+          <h2 className="font-body text-3xl sm:text-4xl font-bold text-[#1a2744] mb-3">
             A Living Labour-Market Intelligence Platform
           </h2>
           <p className="font-body text-gray-500 text-base leading-relaxed">
@@ -175,13 +175,13 @@ export default function DashboardPreviewSection() {
         </div>
 
         {/* strategic callout */}
-        <div className={`bg-[#1a2744] rounded-2xl p-4 mb-4 transition-all duration-700 delay-100 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
+        <div className={`bg-[#1c244b] rounded-2xl p-4 mb-4 transition-all duration-700 delay-100 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-            <div className="w-12 h-12 rounded-xl bg-[#E85D26]/20 border border-[#E85D26]/30 flex items-center justify-center flex-shrink-0">
-              <FaLightbulb className="w-6 h-6 text-[#E85D26]" strokeWidth={1.8} />
+            <div className="w-12 h-12 rounded-xl bg-[#ff8000]/20 border border-[#ff8000]/30 flex items-center justify-center flex-shrink-0">
+              <FaLightbulb className="w-6 h-6 text-[#ff8000]" strokeWidth={1.8} />
             </div>
             <div>
-              <p className="font-display text-white text-base font-bold mb-1">Strategic Vision</p>
+              <p className="font-body text-white text-base font-bold mb-1">Strategic Vision</p>
               <p className="font-body text-white/65 text-sm leading-relaxed">
                 "The dashboard is not just a feature. It is the <em>value proposition made visible</em> — showing, in real time, what Spark does for the region: reduce friction, increase mobility, and create economic value."
               </p>
@@ -193,7 +193,7 @@ export default function DashboardPreviewSection() {
         <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-5 ">
           {FEATURES.map(({ title, Icon, desc }, i) => (
             <div key={title}
-              className={`p-5 bg-[#1a2744] rounded-2xl border border-gray-100 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300
+              className={`p-5 bg-[#1c244b] rounded-2xl border border-gray-100 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300
                 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
               style={{ transitionDelay: `${i * 70}ms` }}>
               <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-[#1a2744]">
@@ -215,8 +215,8 @@ export default function DashboardPreviewSection() {
           <p className="font-body text-gray-400 text-[10px] text-center uppercase tracking-widest mb-3">Serving three audiences simultaneously</p>
           <div className="flex flex-wrap justify-center gap-3">
             {['Jobseekers', 'Employers', 'Municipalities & Regional Stakeholders'].map(a => (
-              <span key={a} className="inline-flex items-center gap-2 bg-[#1a2744]/5 text-[#1a2744] text-xs font-semibold px-4 py-2 rounded-full font-body">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#E85D26]" />{a}
+              <span key={a} className="inline-flex items-center gap-2 bg-[#1c244b]/5 text-[#1a2744] text-xs font-semibold px-4 py-2 rounded-full font-body">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#ff8000]" />{a}
               </span>
             ))}
           </div>

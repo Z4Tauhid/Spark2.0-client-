@@ -3,28 +3,28 @@ import { Link, NavLink, useNavigate } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
 const NAV_LINKS = [
-  { to: '/about',               label: 'About' },
-  { to: '/for-trainees',        label: 'For Trainees' },
-  { to: '/for-organizations',   label: 'For Organizations' },
+  { to: '/about', label: 'About' },
+  { to: '/for-trainees', label: 'For Trainees' },
+  { to: '/for-organizations', label: 'For Organizations' },
   { to: '/leadership-training', label: 'Leadership Training' },
-  { to: '/news',                label: 'News' },
-  { to: '/contact',             label: 'Contact Us' },
+  { to: '/news', label: 'News' },
+  { to: '/contact', label: 'Contact Us' },
 ];
 
 const SparkLogo = ({ onClick }) => (
   <Link to="/" onClick={onClick} className="flex items-center group">
-    
+
     <img
       src="https://sparktraineeships.com/wp-content/uploads/2025/05/Main-Logo.svg"
       alt="Spark Logo"
       className="h-20 w-auto object-contain"
     />
-    
+
   </Link>
 );
 
 export default function Navbar() {
-  const [open, setOpen]       = useState(false);
+  const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { isAuthenticated, user, logout } = useAuth();
   const navigate = useNavigate();
@@ -66,15 +66,15 @@ export default function Navbar() {
                 className={({ isActive }) =>
                   `relative px-3.5 py-2 rounded-lg text-[13.5px] font-medium font-body transition-colors duration-150
                    ${isActive
-                     ? 'text-[#E85D26]'
-                     : 'text-gray-600 hover:text-[#1a2744] hover:bg-gray-50'}`
+                    ? 'text-[#ff8000]'
+                    : 'text-gray-600 hover:text-[#1a2744] hover:bg-gray-50'}`
                 }
               >
                 {({ isActive }) => (
                   <>
                     {label}
                     {isActive && (
-                      <span className="absolute bottom-0 left-3.5 right-3.5 h-[2px] rounded-full bg-[#E85D26]" />
+                      <span className="absolute bottom-0 left-3.5 right-3.5 h-[2px] rounded-full bg-[#ff8000]" />
                     )}
                   </>
                 )}
@@ -88,13 +88,13 @@ export default function Navbar() {
               <>
                 <Link
                   to="/dashboard"
-                  className="text-[13.5px] font-medium font-body text-[#1a2744] hover:text-[#E85D26] transition-colors"
+                  className="text-[13.5px] font-medium font-body text-[#1a2744] hover:text-[#ff8000] transition-colors"
                 >
                   Hi, {user?.firstName}
                 </Link>
                 <button
                   onClick={handleLogout}
-                  className="px-5 py-2 rounded-full border-2 border-[#1a2744] text-[#1a2744] text-[13px] font-semibold font-body hover:bg-[#1a2744] hover:text-white transition-all duration-200"
+                  className="px-5 py-2 rounded-full border-2 border-[#1a2744] text-[#1a2744] text-[13px] font-semibold font-body hover:bg-[#1c244b] hover:text-white transition-all duration-200"
                 >
                   Sign Out
                 </button>
@@ -109,7 +109,7 @@ export default function Navbar() {
                 </Link>
                 {/* <Link
                   to="/register"
-                  className="px-5 py-2.5 rounded-full bg-[#E85D26] text-white text-[13px] font-semibold font-body hover:bg-[#c44d1c] hover:shadow-md hover:-translate-y-px transition-all duration-200"
+                  className="px-5 py-2.5 rounded-full bg-[#ff8000] text-white text-[13px] font-semibold font-body hover:bg-[#c44d1c] hover:shadow-md hover:-translate-y-px transition-all duration-200"
                 >
                   Get Started
                 </Link> */}
@@ -120,11 +120,11 @@ export default function Navbar() {
           {/* Get Started Button */}
 
           <div className="flex justify-center sm:justify-start mr-2 md:mr-0">
-              <Link
-                to="/register"
-                className="
+            <Link
+              to="/register"
+              className="
                   inline-flex items-center justify-center
-                  bg-[#E85D26]
+                  bg-[#ff8000]
                   text-[#0F1A4A]
                   font-bold font-body
                   text-[11px] sm:text-[13px] md:text-[15px]
@@ -137,14 +137,14 @@ export default function Navbar() {
                   hover:brightness-95
                   whitespace-nowrap
                 "
-                style={{
-                  clipPath: "polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%)",
-                }}
-              >
-                Get Started
-              </Link>
-            </div>
-  
+              style={{
+                clipPath: "polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%)",
+              }}
+            >
+              Get Started
+            </Link>
+          </div>
+
 
           {/* ── Mobile hamburger ── */}
           <button
@@ -175,7 +175,7 @@ export default function Navbar() {
               onClick={close}
               className={({ isActive }) =>
                 `block px-4 py-3 rounded-xl text-[14px] font-medium font-body transition-colors
-                 ${isActive ? 'bg-orange-50 text-[#E85D26]' : 'text-gray-700 hover:bg-gray-50 hover:text-[#1a2744]'}`
+                 ${isActive ? 'bg-orange-50 text-[#ff8000]' : 'text-gray-700 hover:bg-gray-50 hover:text-[#1a2744]'}`
               }
             >
               {label}
@@ -186,21 +186,21 @@ export default function Navbar() {
             {isAuthenticated ? (
               <>
                 <Link to="/dashboard" onClick={close}
-                  className="block text-center py-3 px-4 rounded-full border-2 border-[#1a2744] text-[#1a2744] text-[14px] font-semibold font-body hover:bg-[#1a2744] hover:text-white transition-all">
+                  className="block text-center py-3 px-4 rounded-full border-2 border-[#1a2744] text-[#1a2744] text-[14px] font-semibold font-body hover:bg-[#1c244b] hover:text-white transition-all">
                   Dashboard
                 </Link>
                 <button onClick={handleLogout}
-                  className="py-3 px-4 rounded-full bg-[#E85D26] text-white text-[14px] font-semibold font-body hover:bg-[#c44d1c] transition-all">
+                  className="py-3 px-4 rounded-full bg-[#ff8000] text-white text-[14px] font-semibold font-body hover:bg-[#c44d1c] transition-all">
                   Sign Out
                 </button>
               </>
             ) : (
               <>
                 <Link to="/login" onClick={close}
-                  className="block text-center py-3 px-4 rounded-full border-2 border-[#1a2744] text-[#1a2744] text-[14px] font-semibold font-body hover:bg-[#1a2744] hover:text-white transition-all">
+                  className="block text-center py-3 px-4 rounded-full border-2 border-[#1a2744] text-[#1a2744] text-[14px] font-semibold font-body hover:bg-[#1c244b] hover:text-white transition-all">
                   Sign In
                 </Link>
-                
+
               </>
             )}
           </div>
