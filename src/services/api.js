@@ -43,4 +43,10 @@ export const dashboardAPI = {
   getStats: () => api.get('/dashboard/stats'),
 };
 
+export const matchVectorAPI = {
+  get:             ()              => api.get('/match-vector'),
+  save:            (axes)          => api.put('/match-vector', axes),
+  expressInterest: (opportunityId) => api.patch('/match-vector/interest', { opportunityId }),
+};
+
 export default api;

@@ -273,9 +273,9 @@ const STEPS = [
 ];
 
 const BENEFITS = [
-  { emoji: (<FaMoneyCheckAlt />), title: 'Completely Free',          desc: 'Spark is 100% free for trainees. We are compensated by the organisations we partner with — never by candidates.' },
+  { emoji: (<FaMoneyCheckAlt />), title: 'Completely Free',          desc: 'Spark is 100% free for trainees. We are compensated by the organizations we partner with — never by candidates.' },
   { emoji: (<FaCompass />), title: 'Personal Guidance',        desc: 'You get a dedicated Spark contact who knows your background, follows your progress, and advocates for you throughout the process.' },
-  { emoji: (<FcOrganization />), title: 'Vetted Employers',         desc: 'We only work with organisations that are genuinely ready to invest in trainee talent — not just filling a role cheaply.' },
+  { emoji: (<FcOrganization />), title: 'Vetted Employers',         desc: 'We only work with organizations that are genuinely ready to invest in trainee talent — not just filling a role cheaply.' },
   { emoji: (<TbTargetArrow />), title: 'Aligned Matches Only',     desc: 'We won\'t send you to a role that doesn\'t fit. If the right match doesn\'t exist yet, we\'ll tell you honestly and keep looking.' },
   { emoji: (<VscGraphLine />), title: 'Leadership Development',   desc: 'Every placement includes the Personal Leadership Program — 1:1 sessions focused on who you are, what you want, and what you\'re capable of.' },
   { emoji: (<BiWorld />), title: 'Multilingual Welcome',     desc: 'You don\'t need to be fluent in Finnish to apply. We actively place foreign-language speakers in workplaces that are ready for them.' },

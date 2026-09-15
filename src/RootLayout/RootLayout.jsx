@@ -1,16 +1,21 @@
 import React from 'react';
 import Navbar from '../Pages/SharedComponents/Navbar';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import Footer from '../Pages/SharedComponents/Footer';
+import useAuth from '../hooks/useAuth';
 
 const RootLayout = () => {
+  const { pathname } = useLocation();
+  const { user } = useAuth();
+  const isTraineeDashboard = pathname === '/dashboard' && user?.role === 'trainee';
+
   return (
     <div>
-      <Navbar />
-      <div className='min-h-[calc(100vh-335px)]'>
+      {!isTraineeDashboard && <Navbar />}
+      <div className={isTraineeDashboard ? '' : 'min-h-[calc(100vh-335px)]'}>
         <Outlet />
       </div>
-      <Footer />
+      {!isTraineeDashboard && <Footer />}
     </div>
   );
 };

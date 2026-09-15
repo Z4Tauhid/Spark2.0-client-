@@ -269,7 +269,7 @@ export default function ProgramTypesSection() {
             Difference Between Internship, Thesis Work &amp; Traineeship
           </h2>
           <p className="font-body text-white/55 text-base max-w-2xl mx-auto">
-            Understanding which path fits your career stage ensures the best outcome — for both trainees and organisations.
+            Understanding which path fits your career stage ensures the best outcome — for both trainees and organizations.
           </p>
         </div>
 
@@ -335,8 +335,8 @@ export default function ProgramTypesSection() {
         <div className={`transition-all duration-700 delay-300 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
           <p className="font-body text-white/45 text-sm text-center mt-3">
             Spark specialises in the{' '}
-            <span className="text-[#ff8000] font-semibold">Young (or New to Finland) Professional</span>{' '}
-            stage — long-term, paid traineeships that build real careers.
+            <span className="text-[#ff8000] font-semibold">Young and New-to-Finland Professionals</span>{' '}
+            stage: long-term, paid traineeships that build real careers.
           </p>
         </div>
       </div>

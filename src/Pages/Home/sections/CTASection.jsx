@@ -14,23 +14,26 @@ export default function CTASection() {
           Bridge the Gap Between Talent and Opportunity
         </h2>
         <p className="font-body text-white/75 text-base sm:text-lg mb-4 max-w-2xl mx-auto leading-relaxed">
-          Whether you're a young professional seeking your first meaningful role, or an organisation looking to strengthen your team, Spark is here to make it happen.
+          Whether you're a young professional seeking your first meaningful role, or an organization looking to strengthen your team, Spark is here to make it happen.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link to="/register"
             className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-[#ff8000] text-sm font-bold font-body rounded-full hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200">
-            I'm a Trainee — Get Matched
+            I'm a Trainee. Get Matched!
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3"/>
             </svg>
           </Link>
           <Link to="/for-organizations"
             className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/15 text-white text-sm font-bold font-body rounded-full border-2 border-white/40 hover:bg-white/25 hover:-translate-y-0.5 transition-all duration-200">
-            I'm an Organization — Get Matched
+            I'm an organization. Get Matched!
+             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
           </Link>
         </div>
         <p className="font-body text-white/40 text-xs mt-3">
-          Free for trainees · Finland-based team · Trainees arrive pre-assessed and workplace-ready. Post roles at no cost; pay only on confirmed 
+          Free for trainees. Finland-based team. Trainees arrive pre-assessed and workplace-ready. Post roles at no cost; pay only on confirmed hire.
         </p>
       </div>
     </section>

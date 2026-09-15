@@ -20,7 +20,7 @@ const STEPS = [
   },
   {
     n: '02', title: 'Smart Matching',
-    desc: 'We align trainees with organisations based on skills, personality, work culture, language, and long-term potential — not just job descriptions.',
+    desc: 'We align trainees with organizations based on skills, personality, work culture, language, and long-term potential — not just job descriptions.',
     icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>,
   },
   {
@@ -30,7 +30,7 @@ const STEPS = [
   },
   {
     n: '04', title: 'Long-Term Retention',
-    desc: 'Our goal is retention, not just placement. We track outcomes, measure impact, and ensure trainees stay in the region and grow within their organisations.',
+    desc: 'Our goal is retention, not just placement. We track outcomes, measure impact, and ensure trainees stay in the region and grow within their organizations.',
     icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>,
   },
 ];

@@ -3,12 +3,13 @@ import { Link, NavLink, useNavigate } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
 const NAV_LINKS = [
-  { to: '/about', label: 'About' },
+  // { to: '/about', label: 'About' },
   { to: '/for-trainees', label: 'For Trainees' },
   { to: '/for-organizations', label: 'For Organizations' },
-  { to: '/leadership-training', label: 'Leadership Training' },
-  { to: '/news', label: 'News' },
-  { to: '/contact', label: 'Contact Us' },
+  { to: '/Roi_Cal', label: 'ROI Calculator' },
+  // { to: '/leadership-training', label: 'Leadership Training' },
+  // { to: '/news', label: 'News' },
+  // { to: '/contact', label: 'Contact Us' },
 ];
 
 const SparkLogo = ({ onClick }) => (
@@ -52,7 +53,7 @@ export default function Navbar() {
           : 'bg-white border-b border-gray-100'}`}
     >
       <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-[70px] ">
+        <div className="flex items-center justify-between h-[70px]">
 
           {/* ── Logo ── */}
           <SparkLogo onClick={close} />
@@ -119,6 +120,7 @@ export default function Navbar() {
 
           {/* Get Started Button */}
 
+        {!isAuthenticated && (
           <div className="flex justify-center sm:justify-start mr-2 md:mr-0">
             <Link
               to="/register"
@@ -144,7 +146,7 @@ export default function Navbar() {
               Get Started
             </Link>
           </div>
-
+        )}
 
           {/* ── Mobile hamburger ── */}
           <button

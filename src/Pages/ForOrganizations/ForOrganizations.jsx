@@ -64,7 +64,7 @@ function PageHero() {
               <span className="text-[#ff8000]">Without the Friction.</span>
             </h1>
             <p className="font-body text-white/60 text-base sm:text-lg leading-relaxed mb-8 max-w-lg">
-              Spark connects Finnish organisations with pre-vetted, motivated young professionals — reducing hiring costs, administrative burden, and time-to-productivity. We handle the matching. You focus on the work.
+              Spark connects Finnish organizations with pre-vetted, motivated young professionals — reducing hiring costs, administrative burden, and time-to-productivity. We handle the matching. You focus on the work.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <Link to="/contact"
@@ -243,7 +243,7 @@ function OrgTestimonial({ quote, name, role, emoji, delay, inView }) {
 
 /* ─── DATA ─── */
 const ORG_STEPS = [
-  { n: 1, title: 'Initial Consultation',       desc: 'We start with a free call to understand your organisation — your culture, your needs, and what kind of trainee would genuinely thrive with your team.' },
+  { n: 1, title: 'Initial Consultation',       desc: 'We start with a free call to understand your organization — your culture, your needs, and what kind of trainee would genuinely thrive with your team.' },
   { n: 2, title: 'Readiness Assessment',       desc: 'Spark evaluates your talent readiness, inclusion maturity, and onboarding capacity. You receive a score and tailored recommendations before any commitment.' },
   { n: 3, title: 'Role Definition',            desc: 'Together we define a clear traineeship role with goals, duration, compensation, and growth pathways. Good definition leads to better matching.' },
   { n: 4, title: 'Candidate Presentation',     desc: 'We present 2–3 pre-vetted, matched candidates. You interview only people who genuinely fit. No sifting through hundreds of CVs.' },
@@ -343,9 +343,9 @@ const ORG_TESTIMONIALS = [
   {
     emoji: <FaUserGraduate className="text-[#ff8000]" />,
     quote:
-      'As a public organisation we were hesitant about trainee programmes. Spark handled everything — and our trainee is now a permanent employee.',
+      'As a public organization we were hesitant about trainee programmes. Spark handled everything — and our trainee is now a permanent employee.',
     name: 'Director',
-    role: 'Public sector organisation, Heinola',
+    role: 'Public sector organization, Heinola',
   },
 ];
 
@@ -431,7 +431,7 @@ export default function ForOrganizations() {
                 We Work Across Every Sector
               </h2>
               <p className="font-body text-gray-500 text-base leading-relaxed mb-4">
-                Spark places trainees across the full range of Finnish industries. Whether you're a small SME or a large public organisation, we adapt our approach to your needs.
+                Spark places trainees across the full range of Finnish industries. Whether you're a small SME or a large public organization, we adapt our approach to your needs.
               </p>
               <p className="font-body text-gray-500 text-base leading-relaxed mb-6">
                 We have a particular focus on sectors facing talent shortages in Päijät-Häme — manufacturing, logistics, tech, and the green transition — but we serve all industries.
@@ -467,7 +467,7 @@ export default function ForOrganizations() {
             <p className="font-body text-[#ff8000] font-semibold text-xs tracking-widest uppercase mb-3">Partner Stories</p>
             <h2 className="font-body text-3xl sm:text-4xl font-bold text-[#1a2744] mb-3">What Our Partners Say</h2>
             <p className="font-body text-gray-500 text-base max-w-lg mx-auto">
-              Placeholder testimonials — replace with real quotes from your partner organisations.
+              Placeholder testimonials — replace with real quotes from your partner organizations.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
@@ -494,7 +494,7 @@ export default function ForOrganizations() {
                       What's Included in the Pilot
                     </h2>
                     <p className="font-body text-white/55 text-sm mt-2 leading-relaxed">
-                      We're currently onboarding organisations into our pilot cohort. Here's exactly what you get — with no commitment required to start.
+                      We're currently onboarding organizations into our pilot cohort. Here's exactly what you get — with no commitment required to start.
                     </p>
                   </div>
                 </div>
@@ -529,7 +529,7 @@ export default function ForOrganizations() {
               Start With a Free Consultation
             </h2>
             <p className="font-body text-white/75 text-base leading-relaxed mb-8 max-w-xl mx-auto">
-              No commitment. No upfront fees. Just a 30-minute call to see if Spark is the right fit for your organisation — and a free readiness assessment if it is.
+              No commitment. No upfront fees. Just a 30-minute call to see if Spark is the right fit for your organization — and a free readiness assessment if it is.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link to="/contact"

@@ -1,7 +1,8 @@
 import { useRef, useState, useEffect } from 'react';
-import { CgOrganisation } from 'react-icons/cg';
+
+import { FcOrganization } from "react-icons/fc";
 import { FaEnvelope, FaGraduationCap } from 'react-icons/fa6';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 function useInView(threshold = 0.12) {
   const ref = useRef(null);
@@ -78,7 +79,7 @@ const CONTACT_INFO = [
 ];
 
 const FAQS = [
-  { q: 'Is Spark Traineeships free for trainees?',       a: 'Yes — completely free for trainees. We are compensated by the organisations we partner with, never by the candidates.' },
+  { q: 'Is Spark Traineeships free for trainees?',       a: 'Yes — completely free for trainees. We are compensated by the organizations we partner with, never by the candidates.' },
   { q: 'How long does the matching process take?',       a: 'Our average time-to-match is 4 days from registration. Complex or specialist placements may take slightly longer.' },
   { q: 'What regions do you operate in?',               a: 'We are based in Päijät-Häme and currently operate primarily across the region. Expansion to other Finnish regions is planned.' },
   { q: 'Can international candidates apply?',           a: 'Absolutely. We actively work with multilingual candidates and have a growing network of Finnish employers open to international talent.' },
@@ -181,7 +182,7 @@ export default function Contact() {
                       <div className="flex flex-col md:flex-row gap-3 items-start md:items-stretch">
                         {[
                           { value: 'trainee',      label: (<div className='flex justify-center items-center gap-2 text-lg'><FaGraduationCap size={25}/> <span>Trainee</span></div>) },
-                          { value: 'organization', label: (<div className='flex justify-center items-center gap-2 text-lg'><CgOrganisation size={25}/> <span>Organization</span></div>) },
+                          { value: 'organization', label: (<div className='flex justify-center items-center gap-2 text-lg'><FcOrganization  size={25}/> <span>Organization</span></div>) },
                           { value: 'other',        label: (<div className='flex justify-center items-center gap-2 text-lg'><FaEnvelope size={25}/> <span>Other</span></div>) },
                         ].map(opt => (
                           <button type="button" key={opt.value}

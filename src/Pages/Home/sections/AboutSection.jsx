@@ -56,7 +56,7 @@ export default function AboutSection() {
               <strong className="text-[#1a2744]">Spark Traineeships Oy</strong> connects skilled young professionals with private and public sector employers in non-metropolitan Finland — addressing talent shortages and fostering long-term community growth.
             </p>
             <p className="font-body text-gray-600 leading-relaxed mb-4">
-              Through tailored <strong className="text-[#1a2744]">traineeship programs</strong> and personal leadership training, Spark empowers young talent to thrive in meaningful roles, while helping organisations build a diverse and skilled workforce.
+              Through tailored <strong className="text-[#1a2744]">traineeship programs</strong> and personal leadership training, Spark empowers young talent to thrive in meaningful roles, while helping organizations build a diverse and skilled workforce.
             </p>
             <p className="font-body text-gray-600 leading-relaxed mb-8">
               Our model is designed to bring new energy and ideas to communities facing workforce renewal challenges, whether you are a young graduate starting to make a difference, or an organization looking to invest in the future.

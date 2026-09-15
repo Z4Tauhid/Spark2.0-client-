@@ -4,6 +4,7 @@ import Home from '../Pages/Home/Home';
 import About from '../Pages/About/About';
 import ForTrainees from '../Pages/ForTrainees/ForTrainees';
 import ForOrganizations from '../Pages/ForOrganizations/ForOrganizations';
+import RoiCal from '../Pages/RoiCal/RoiCal';
 import LeadershipTraining from '../Pages/LeadershipTraining/LeadershipTraining';
 import News from '../Pages/News/News';
 import Contact from '../Pages/Contact/Contact';
@@ -35,6 +36,10 @@ const Router = createBrowserRouter([
       {
         path: '/for-organizations',
         Component: ForOrganizations,
+      },
+      {
+        path: '/Roi_Cal',
+        Component: RoiCal,
       },
       {
         path: '/leadership-training',

@@ -94,7 +94,7 @@ const MILESTONES = [
   { year: '2020', text: 'First cohort of trainees placed with Päijät-Häme employers. Personal leadership program launched.' },
   { year: '2022', text: 'Expanded multilingual employer network. First foreign-language speakers placed in Finnish workplaces.' },
   { year: '2023', text: 'EOR partnership with Vonk launched, reducing employer administrative burden significantly.' },
-  { year: '2024', text: 'Pilot program opened to new organisations. Regional intelligence dashboard development begins.' },
+  { year: '2024', text: 'Pilot program opened to new organizations. Regional intelligence dashboard development begins.' },
   { year: '2025+', text: 'Scaling across Finland — building the living labour-market platform that serves jobseekers, employers, and municipalities.' },
 ];
 
@@ -145,7 +145,7 @@ export default function About() {
                 More Than a Traineeship Provider
               </h2>
               <p className="font-body text-gray-600 leading-relaxed mb-4">
-                <strong className="text-[#1a2744]">Spark Traineeships Oy</strong> was founded with a single belief: that talented young professionals and forward-thinking organisations in non-metropolitan Finland deserve better connections.
+                <strong className="text-[#1a2744]">Spark Traineeships Oy</strong> was founded with a single belief: that talented young professionals and forward-thinking organizations in non-metropolitan Finland deserve better connections.
               </p>
               <p className="font-body text-gray-600 leading-relaxed mb-4">
                 We specialise in long-term, paid traineeships combined with a <strong className="text-[#1a2744]">Personal Leadership Program</strong> — because we believe that lasting employment requires more than just matching skills to job descriptions.
@@ -258,7 +258,7 @@ export default function About() {
               Ready to Make a Difference?
             </h2>
             <p className="font-body text-white/60 text-base leading-relaxed mb-8 max-w-xl mx-auto">
-              Whether you're a trainee looking for your next opportunity or an organisation ready to strengthen your team — Spark is here.
+              Whether you're a trainee looking for your next opportunity or an organization ready to strengthen your team — Spark is here.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link to="/register"

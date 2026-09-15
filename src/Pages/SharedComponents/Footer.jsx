@@ -46,7 +46,7 @@ export default function Footer() {
               
             </div>
             <p className="font-body text-sm text-[#1a2744] font-medium leading-relaxed mb-6 max-w-xs">
-              Connecting skilled young professionals with meaningful opportunities across Päijät-Häme and beyond.
+              Connecting skilled Young and New-to-Finland Professionals with meaningful opportunities across Päijät-Häme and beyond.
             </p>
             {/* Social icons */}
             <div className="flex gap-2">
